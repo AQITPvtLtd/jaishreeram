@@ -1,0 +1,80 @@
+import React from 'react'
+import Image from 'next/image'
+const Mission = () => {
+  return (
+    <div>
+      <div
+        className="relative w-full h-full overflow-hidden bg-cover bg-center"
+        style={{ backgroundImage: "url(/about/Bg-about.jpg)" }}
+      >
+        <div className="lg:grid lg:grid-cols-12 relative items-center justify-center w-full h-full p-8 text-center bg-black bg-opacity-50">
+          <div className="col-start-2 col-span-4">
+            <div className="mb-8 lg:mb-0 lg:mr-8 flex-shrink-0">
+              <Image
+                src="/about/mission.png"
+                width={300}
+                height={300}
+                alt="Mission Image"
+                className="rounded-lg"
+              />
+            </div>
+          </div>
+
+          <div className="col-span-6">
+            <h1 className="text-center text-white font-semibold text-5xl py-3">
+              Our Mission
+            </h1>
+            <h2 className="text-white text-lg md:text-xl lg:text-2xl max-w-prose">
+              Our mission at JSR PVT LTD is to provide high quality services in
+              the areas of stock market updates, health insurance, legal advice,
+              and real estate matters. We guide our clients every step of the
+              way with innovative systems, personalized solutions, and expert
+              advice. Leveraging our deep industry expertise and commitment to
+              excellence, we aim to build lasting relationships based on trust
+              and success. Our goal is to help our clients achieve their
+              financial, health, legal, and property goals, and ensure they
+              thrive in a rapidly changing and competitive world.
+            </h2>
+          </div>
+        </div>
+      </div>
+
+      <div
+        className="relative w-full h-full overflow-hidden bg-cover bg-center mt-10"
+        style={{ backgroundImage: "url(/about/Bg-about.jpg)" }}
+      >
+        <div className="lg:grid lg:grid-cols-12 relative items-center justify-center w-full h-full p-8 text-center bg-black bg-opacity-50">
+          <div className="col-span-8">
+            <h1 className="text-center text-white font-semibold text-5xl py-3">
+              Our Vision
+            </h1>
+            <h2 className="text-white text-lg md:text-xl lg:text-2xl max-w-prose">
+              Our goal at JSR PVT LTD is to help people and businesses succeed
+              by providing great insight into the stock market, high quality
+              health insurance, expert legal advice and high quality listed
+              properties. We want to be a trusted and innovative partner in
+              these areas, driving our clients’ growth and success. Focusing on
+              excellence, personalized service and understanding our clients’
+              needs, we aim to grow their business and personal careers,
+              ensuring they thrive in an ever-changing market.
+            </h2>
+          </div>
+
+          <div className="col-span-4 px-20">
+            <div className="mb-8 lg:mb-0 lg:mr-8 flex-shrink-0">
+              <Image
+                src="/about/vision.png"
+                width={300}
+                height={300}
+                alt="Mission Image"
+                className="rounded-lg"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+export default Mission
