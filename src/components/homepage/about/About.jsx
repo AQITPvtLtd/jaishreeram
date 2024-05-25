@@ -9,11 +9,11 @@ const About = () => {
         <h2 className="text-lg text-gray-600 mb-8">JSR PRIVATE LIMITED</h2>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center bg-gray-600">
         {/* Image Section */}
         <div className="relative overflow-hidden rounded-lg">
           <div className="slide-container">
-            <Image src="/about/buss.jpg" width={500} height={350} alt="Business" className="object-cover animate__slideInLeft animate__repeat-2" />
+            <Image src="/about/Bussness.png" width={500} height={350} alt="Business" className="object-cover animate__slideInLeft animate__repeat-2" />
           </div>
         </div>
 

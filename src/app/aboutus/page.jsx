@@ -8,26 +8,23 @@ const About = () => {
     <div>
       <div className="w-full h-[500px] overflow-hidden relative">
         <Image
-          src={"/about/busnessimg.png"}
+          src="/about/aboutbg.png"
           layout="fill"
           objectFit="cover"
           alt="Business"
         />
-        <div className="absolute inset-0 flex items-center justify-center">
-          <h1 className="text-6xl sm:text-9xl font-bold relative">
-            <span className="text-stroke-1 text-orange-500 absolute inset-0">
-              JSR
-            </span>
-            JSR
+        <div className="absolute inset-0 flex items-center justify-center flex-col text-center">
+          <h1 className="text-4xl sm:text-9xl font-bold mb-4 text-white">
+            About
           </h1>
+          <h2 className="text-4xl lg:text-5xl font-semibold mb-4 text-white">
+            JSR PRIVATE LIMITED
+          </h2>
         </div>
       </div>
 
       <div className="container mx-auto px-4 lg:px-8 py-12">
-        <div className="text-center">
-          <h1 className="text-4xl lg:text-5xl font-semibold mb-4">About</h1>
-          <h2 className="text-lg text-gray-600 mb-8">JSR PRIVATE LIMITED</h2>
-        </div>
+        <div className="text-center"></div>
 
         {/* Text Section */}
         <div className="px-4 lg:px-0">

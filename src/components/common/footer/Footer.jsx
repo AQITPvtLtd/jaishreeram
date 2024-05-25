@@ -1,6 +1,10 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { FaInstagram } from "react-icons/fa";
+import { FaFacebook } from "react-icons/fa";
+import { CiLinkedin } from "react-icons/ci";
+import { FaXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
   return (
@@ -11,9 +15,11 @@ const Footer = () => {
           <p className="mt-4 text-center md:text-left">
             We are very proud to be serving our local area for over 35 years!
           </p>
+          <Link href={"tel:929-242-6868"} target="__blank">
           <button className="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50">
             CALL 929-242-6868
           </button>
+          </Link>
         </div>
 
         <div className="col-span-6 md:col-span-4">
@@ -23,13 +29,13 @@ const Footer = () => {
               <Link href="/">Home</Link>
             </li>
             <li className="mb-2 transition duration-300 ease-in-out hover:text-blue-600">
-              <Link href="/">About Us</Link>
+              <Link href="/aboutus">About Us</Link>
             </li>
             <li className="mb-2 transition duration-300 ease-in-out hover:text-blue-600">
-              <Link href="/">Services</Link>
+              <Link href="/services">Services</Link>
             </li>
             <li className="mb-2 transition duration-300 ease-in-out hover:text-blue-600">
-              <Link href="/">Why Choose Us</Link>
+              <Link href="/whychooseus">Why Choose Us</Link>
             </li>
             <li className="mb-2 transition duration-300 ease-in-out hover:text-blue-600">
               <Link href="/contactus">Contact Us</Link>
@@ -40,15 +46,50 @@ const Footer = () => {
         <div className="col-span-6 md:col-span-4">
           <h1 className="text-lg font-bold mb-4">Get In Touch</h1>
           <div className="mb-4">
-            <Link href="/" className="transition duration-300 ease-in-out hover:text-blue-600">info@jsrpvtltd.com</Link>
+            <Link
+              href="mailto:info@jsrpvtltd.com"
+              target="__balnk"
+              className="transition duration-300 ease-in-out hover:text-blue-600"
+            >
+              info@jsrpvtltd.com
+            </Link>
           </div>
+
+
           <div className="mb-4">
-            <Link href="/" className="transition duration-300 ease-in-out hover:text-blue-600">+91 9582-930-940</Link>
+            <Link
+              href="tel:+91 9582-930-940"
+              target="__blank"
+              className="transition duration-300 ease-in-out hover:text-blue-600"
+            >
+              +91 9582-930-940
+            </Link>
           </div>
+
+
           <div>
-            <Link href="/" className="transition duration-300 ease-in-out hover:text-blue-600">
+            <Link
+              href="/"
+              className="transition duration-300 ease-in-out hover:text-blue-600"
+            >
               G-36 First Floor, Connaught Cir, Block G, Connaught Place, New
               Delhi, Delhi 110001
+            </Link>
+          </div>
+
+          <div className="flex gap-4 text-4xl mt-4">
+            <Link href={"https://www.instagram.com/jsr_pvt_ltd/?igsh=MTU1cDdwbGVpeHp6cg%3D%3D"} target="_blank">
+              <FaInstagram className="bg-black rounded-full text-white p-1.5" />
+            </Link>
+            <Link href={"/"} target="_blank">
+              <FaFacebook className="bg-black rounded-full text-white p-1.5" />
+            </Link>
+
+            <Link href={"/"} target="_blank">
+              <CiLinkedin className="bg-black rounded-full text-white p-1.5" />
+            </Link>
+            <Link href={"/"} target="_blank">
+              <FaXTwitter className="bg-black rounded-full text-white p-1.5" />
             </Link>
           </div>
         </div>

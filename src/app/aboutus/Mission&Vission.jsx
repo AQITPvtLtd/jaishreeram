@@ -1,5 +1,5 @@
-import React from 'react'
-import Image from 'next/image'
+import React from "react";
+import Image from "next/image";
 const Mission = () => {
   return (
     <div>
@@ -8,7 +8,7 @@ const Mission = () => {
         style={{ backgroundImage: "url(/about/Bg-about.jpg)" }}
       >
         <div className="lg:grid lg:grid-cols-12 relative items-center justify-center w-full h-full p-8 text-center bg-black bg-opacity-50">
-          <div className="col-start-2 col-span-4">
+          <div className="col-start-2 col-span-4 flex justify-center lg:justify-start">
             <div className="mb-8 lg:mb-0 lg:mr-8 flex-shrink-0">
               <Image
                 src="/about/mission.png"
@@ -67,14 +67,14 @@ const Mission = () => {
                 width={300}
                 height={300}
                 alt="Mission Image"
-                className="rounded-lg"
+                className="rounded-lg py-5"
               />
             </div>
           </div>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Mission
+export default Mission;
