@@ -80,7 +80,7 @@ const Contact = () => {
                 </p>
               </Link>
             </div>
-            <Link href={"https://www.google.com/maps/place/Tek+Booster/@28.6328375,77.2165428,15z/data=!4m6!3m5!1s0x390cfd3acd5f7af3:0xb6a04a02d103e7a0!8m2!3d28.6328375!4d77.2165428!16s%2Fg%2F11vywbr4xj?entry=ttu"} target="__blank">
+            <Link href={"https://maps.app.goo.gl/m9QsWKnZU1Ka7eFV6"} target="__blank">
             <div className="flex items-center space-x-4">
               
                 <IoLocation className="text-6xl text-orange-500" />
@@ -126,7 +126,7 @@ const Contact = () => {
             </Link> */}
                 <Link
                   href={"https://in.pinterest.com/jsr23031991/"}
-                  target="_blank hover"
+                  target="_blank hover" 
                 >
                   <FaPinterest className="bg-black rounded-full text-white p-1.5 hover:text-orange-500" />
                 </Link>

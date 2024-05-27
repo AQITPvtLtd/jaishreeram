@@ -77,7 +77,7 @@ const Navbar = () => {
         <div className="col-start-11 col-span-2 md:hidden flex justify-end">
           <button
             onClick={toggleMenu}
-            className="text-white focus:outline-none"
+            className="text-black focus:outline-none"
           >
             <svg
               className="w-6 h-6"

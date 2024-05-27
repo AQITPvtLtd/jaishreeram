@@ -4,7 +4,7 @@ import React from "react";
 const contact = () => {
   return (
     <div>
-      <form className="lg:px-40 md:px-10">
+      <form className="lg:px-40 md:px-10 overflow-hidden">
         <div>
           <Contact />
         </div>

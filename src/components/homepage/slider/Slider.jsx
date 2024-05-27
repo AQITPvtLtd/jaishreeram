@@ -6,7 +6,7 @@ import ScrollTrigger from "react-scroll-trigger";
 const Slider = () => {
   const [animate, setAnimate] = useState(false);
   return (
-    <div className="relative w-full h-screen overflow-hidden">
+    <div className="relative w-full h-screen overflow-x-hidden">
       <div className="absolute inset-0">
         <Image
           src="/slider/slide.jpg"
@@ -26,7 +26,7 @@ const Slider = () => {
                 animate && "animate__zoomIn animate__slower animate__animated"
               }`}>
             <h1
-              className={"text-7xl font-semibold p-4"}
+              className={"lg:text-7xl md:text-5xl sm:text-5xl font-semibold p-4"}
             >
               JSR PVT LTD
             </h1>

@@ -3,7 +3,7 @@ import React from "react";
 
 const Top = () => {
   return (
-    <div className="flex justify-around p-3.5 bg-black text-white">
+    <div className="flex justify-around p-3.5 bg-black text-white overflow-hidden">
       <div>
         <h2>Book Your FREE Consultation Now!</h2>
       </div>
