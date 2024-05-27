@@ -24,7 +24,7 @@ const Mission = () => {
             <h1 className="text-center text-orange-400 font-semibold text-5xl py-3">
               Our Mission
             </h1>
-            <h2 className="text-white text-lg md:text-xl lg:text-2xl max-w-prose">
+            <h2 className="text-white text-lg md:text-xl max-w-prose">
               Our mission at JSR PVT LTD is to provide high quality services in
               the areas of stock market updates, health insurance, legal advice,
               and real estate matters. We guide our clients every step of the

@@ -53,17 +53,17 @@ const Navbar = () => {
   );
 
   return (
-    <nav className="bg-orange-400 p-4">
+    <nav className="bg-white p-4">
       <div className="container mx-auto grid grid-cols-12 items-center">
         <div className="col-start-1 col-span-2 md:col-start-3 md:col-span-2">
-          <Image src="/logo/jsrLogo.webp" width={100} height={100} alt="Logo" />
+          <Image src="/logo/jsrLogo.webp" width={150} height={150} alt="Logo" />
         </div>
 
         <div className="col-span-8 hidden md:flex md:col-span-6 justify-center space-x-8">
           {data.map((d) => (
             <Link key={d.id} href={d.path}>
               <div
-                className="relative group text-black text-lg font-semibold transition duration-300 hover:text-white hover:underline cursor-pointer"
+                className="relative group text-black text-lg font-semibold transition duration-300 hover:text-orange-400 hover:underline cursor-pointer"
                 target={d.newTab ? "_blank" : "_self"}
                 rel={d.newTab ? "noopener noreferrer" : ""}
               >

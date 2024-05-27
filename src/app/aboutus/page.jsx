@@ -5,7 +5,7 @@ import Mission from "./Mission&Vission";
 
 const About = () => {
   return (
-    <div>
+    <div className="mt-[200px]">
       <div className="w-full h-[500px] overflow-hidden relative">
         <Image
           src="/about/aboutbg.png"

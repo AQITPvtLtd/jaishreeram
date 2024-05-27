@@ -66,9 +66,11 @@ const Services = () => {
     <div className="container mx-auto px-4 py-8">
       <h1 className="text-6xl font-semibold text-center mb-12">Our Services</h1>
       <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-4 gap-6">
-
         {data.map((d) => (
-          <div key={d.id} className="bg-white shadow-md hover:shadow-lg rounded-lg overflow-hidden p-6 transition-transform transform hover:scale-105">
+          <div
+            key={d.id}
+            className="bg-white shadow-md hover:shadow-lg rounded-lg overflow-hidden p-6 transition-transform transform hover:scale-105"
+          >
             <div className="relative w-full h-40 mb-4">
               <Image
                 src={`${d.image}`}
@@ -77,10 +79,14 @@ const Services = () => {
                 className="rounded object-cover"
               />
             </div>
-            <h2 className="text-2xl font-semibold mb-2 text-center">{d.title}</h2>
+            <h2 className="text-2xl font-semibold mb-2 text-center">
+              {d.title}
+            </h2>
             <p className="text-lg mb-4 text-center">{d.description}</p>
             <Link href={`/services/${d.id}`}>
-              <div className="block bg-primary py-3 px-6 rounded-md shadow-lg text-center bg-blue-600 text-white hover:bg-blue-700 transition duration-300 ease-in-out">{d.btn}</div>
+              <div className="block bg-primary py-3 px-6 rounded-md shadow-lg text-center bg-orange-500 text-white hover:bg-orange-600 transition duration-300 ease-in-out">
+                {d.btn}
+              </div>
             </Link>
           </div>
         ))}

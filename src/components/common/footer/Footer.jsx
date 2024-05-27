@@ -16,7 +16,7 @@ const Footer = () => {
             We are very proud to be serving our local area for over 35 years!
           </p>
           <Link href={"tel:929-242-6868"} target="__blank">
-          <button className="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50">
+          <button className="mt-4 bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50">
             CALL 929-242-6868
           </button>
           </Link>

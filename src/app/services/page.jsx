@@ -3,7 +3,7 @@ import Jsrservice from './jsrservice'
 
 const page = () => {
   return (
-    <div>
+    <div className='mt-[200px]'>
       <Jsrservice />
     </div>
   )

@@ -9,8 +9,8 @@ export default function Home() {
   return (
     <div>
       <Slider />
-      <About />
       <Services />
+      <About />
       <WhyChooseUs />
       <Vision />
       <Contact />
