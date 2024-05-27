@@ -5,6 +5,10 @@ import Image from "next/image";
 const Servicedata = ({ id }) => {
   const obj = data.find((item) => item.id == id);
 
+  if (!obj) {
+    return <div>Service data not found.</div>;
+  }
+
   return (
     <div className="bg-gray-100 p-6 rounded-lg shadow-md">
       <div key={obj.id}>

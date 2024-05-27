@@ -43,12 +43,15 @@ const Navbar = () => {
     setIsOpen(!isOpen);
   };
 
-  // Custom component for underline animation
+  const handleLinkClick = () => {
+    setIsOpen(false);
+  };
+
   const UnderlineAnimation = ({ isActive }) => (
     <div
       className={`transition-all duration-300 ease-in-out ${
-        isActive ? "opacity-100" : "opacity-0"
-      } absolute bottom-[-2px] left-0 right-0 h-[2px] bg-blue-500`}
+        isActive ? "w-full" : "w-0"
+      } absolute bottom-0 left-0 h-1 bg-orange-400`}
     />
   );
 
@@ -61,13 +64,14 @@ const Navbar = () => {
 
         <div className="col-span-8 hidden md:flex md:col-span-6 justify-center space-x-8">
           {data.map((d) => (
-            <Link key={d.id} href={d.path}>
+            <Link key={d.id} href={d.path} passHref>
               <div
-                className="relative group text-black text-lg font-semibold transition duration-300 hover:text-orange-400 hover:underline cursor-pointer"
+                className="relative group text-black text-lg font-semibold cursor-pointer transition duration-300 ease-in-out transform hover:scale-105"
+                onClick={handleLinkClick}
                 target={d.newTab ? "_blank" : "_self"}
                 rel={d.newTab ? "noopener noreferrer" : ""}
               >
-                {d.title}
+                <span className="inline-block hover:text-orange-400 hover:underline">{d.title}</span>
                 <UnderlineAnimation isActive={isOpen} />
               </div>
             </Link>
@@ -78,6 +82,8 @@ const Navbar = () => {
           <button
             onClick={toggleMenu}
             className="text-black focus:outline-none"
+            aria-label="Toggle menu"
+            aria-expanded={isOpen}
           >
             <svg
               className="w-6 h-6"
@@ -101,9 +107,10 @@ const Navbar = () => {
         <div className="md:hidden">
           <div className="flex flex-col space-y-4 mt-4">
             {data.map((d) => (
-              <Link key={d.id} href={d.path}>
+              <Link key={d.id} href={d.path} passHref>
                 <div
-                  className="text-black text-lg font-semibold transition duration-300 hover:text-white hover:underline cursor-pointer"
+                  className="text-black text-lg font-semibold cursor-pointer transition duration-300 ease-in-out transform hover:scale-105"
+                  onClick={handleLinkClick}
                   target={d.newTab ? "_blank" : "_self"}
                   rel={d.newTab ? "noopener noreferrer" : ""}
                 >
