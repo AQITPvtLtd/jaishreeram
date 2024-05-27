@@ -3,8 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaInstagram } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
-import { CiLinkedin } from "react-icons/ci";
-import { FaXTwitter } from "react-icons/fa6";
+// import { CiLinkedin } from "react-icons/ci";
+import { FaPinterest } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -77,19 +77,19 @@ const Footer = () => {
             </Link>
           </div>
 
-          <div className="flex gap-4 text-4xl mt-4">
+          <div className="flex lg:gap-4 text-4xl mt-4">
             <Link href={"https://www.instagram.com/jsr_pvt_ltd/?igsh=MTU1cDdwbGVpeHp6cg%3D%3D"} target="_blank">
-              <FaInstagram className="bg-black rounded-full text-white p-1.5" />
+              <FaInstagram className="bg-black rounded-full text-white p-1.5 hover:text-orange-500" />
             </Link>
-            <Link href={"/"} target="_blank">
-              <FaFacebook className="bg-black rounded-full text-white p-1.5" />
+            <Link href={"https://www.facebook.com/profile.php?id=61558692683271"} target="_blank">
+              <FaFacebook className="bg-black rounded-full text-white p-1.5 hover:text-orange-500" />
             </Link>
 
-            <Link href={"/"} target="_blank">
-              <CiLinkedin className="bg-black rounded-full text-white p-1.5" />
-            </Link>
-            <Link href={"/"} target="_blank">
-              <FaXTwitter className="bg-black rounded-full text-white p-1.5" />
+            {/* <Link href={"/"} target="_blank">
+              <CiLinkedin className="bg-black rounded-full text-white p-1.5 hover:text-orange-500" />
+            </Link> */}
+            <Link href={"https://in.pinterest.com/jsr23031991/"} target="_blank hover">
+              <FaPinterest className="bg-black rounded-full text-white p-1.5 hover:text-orange-500" />
             </Link>
           </div>
         </div>

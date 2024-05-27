@@ -35,22 +35,23 @@ const WhyChooseUs = () => {
   return (
     <div className="container mx-auto px-4 py-8">
       <h1 className="text-4xl font-semibold text-center py-5">Why Choose Us</h1>
-      <p className="text-2xl font-medium text-center mb-8">
+      <p className="text-2xl font-medium text-center mb-8 text-orange-400">
         Your Trusted Partner in Success
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {data.map((item, index) => (
           <div
             key={index}
-            className="bg-gray-100 p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105"
+            className="bg-slate-400 p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105"
           >
-            <div className="flex justify-center items-center text-6xl p-3">
-              {item.icon}
+            <div className="flex justify-center items-center text-6xl p-3  ">
+             <span className="bg-white rounded-full p-5 items-center text-center text-orange-400"> {item.icon} </span> 
             </div>
-            <h2 className="text-2xl font-semibold text-center mb-2">
+            
+            <h2 className="text-2xl font-semibold text-center mb-2 text-white">
               {item.title}
             </h2>
-            <p className="text-lg text-center">{item.description}</p>
+            <p className="text-lg text-center hover:text-orange-600 font-semibold">{item.description}</p>
           </div>
         ))}
       </div>

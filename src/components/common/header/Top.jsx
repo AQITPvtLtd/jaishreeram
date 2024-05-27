@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const Top = () => {
@@ -8,9 +9,9 @@ const Top = () => {
       </div>
       <div>
         <h2>
-          <a href=" ">
+          <Link href="tel:91 9582-930-940" target="__blank">
             CALL NOW! <span>+91 9582-930-940</span>{" "}
-          </a>
+          </Link>
         </h2>
       </div>
     </div>

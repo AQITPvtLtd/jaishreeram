@@ -5,7 +5,7 @@ import { MdEmail } from "react-icons/md";
 import { IoLocation } from "react-icons/io5";
 import { useRouter } from "next/navigation";
 import { form } from "@/services/user";
-import { toast } from "react-toastify";
+import Swal from "sweetalert2";
 
 const Contact = () => {
   const router = useRouter();
@@ -26,14 +26,28 @@ const Contact = () => {
     const response = await form(formData);
 
     if (response.success) {
-      toast.success(response.message, {
-        position: "top-center",
+
+      Swal.fire({
+        title: "Form Sumbitted Successfully!",
+        text: "You clicked the button!",
+        icon: "success"
       });
+
+      // Swal(response.message, {
+      //   position: "top-center",
+      // });
       router.push("/");
     } else {
-      toast.error(response.message, {
-        position: "top-center",
+
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Something went wrong!",
+        footer: '<a href="#">Why do I have this issue?</a>'
       });
+      // toast.error(response.message, {
+      //   position: "top-center",
+      // });
     }
   };
 

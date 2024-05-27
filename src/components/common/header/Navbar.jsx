@@ -54,11 +54,12 @@ const Navbar = () => {
 
   return (
     <nav className="bg-orange-400 p-4">
-      <div className="container mx-auto flex justify-between items-center">
-        <div className="mr-12">
-          <Image src="/logo/jsrLogo.webp" width={120} height={120} alt="Logo" />
+      <div className="container mx-auto grid grid-cols-12 items-center">
+        <div className="col-start-1 col-span-2 md:col-start-3 md:col-span-2">
+          <Image src="/logo/jsrLogo.webp" width={100} height={100} alt="Logo" />
         </div>
-        <div className="hidden md:flex flex-grow justify-center space-x-8">
+
+        <div className="col-span-8 hidden md:flex md:col-span-6 justify-center space-x-8">
           {data.map((d) => (
             <Link key={d.id} href={d.path}>
               <div
@@ -67,13 +68,13 @@ const Navbar = () => {
                 rel={d.newTab ? "noopener noreferrer" : ""}
               >
                 {d.title}
-                <UnderlineAnimation isActive={isOpen} />{" "}
-                {/* Removed the ||grouped part */}
+                <UnderlineAnimation isActive={isOpen} />
               </div>
             </Link>
           ))}
         </div>
-        <div className="md:hidden">
+
+        <div className="col-start-11 col-span-2 md:hidden flex justify-end">
           <button
             onClick={toggleMenu}
             className="text-white focus:outline-none"
@@ -95,13 +96,14 @@ const Navbar = () => {
           </button>
         </div>
       </div>
+
       {isOpen && (
         <div className="md:hidden">
           <div className="flex flex-col space-y-4 mt-4">
             {data.map((d) => (
               <Link key={d.id} href={d.path}>
                 <div
-                  className="text-black text-lg font-semibold transition duration-300 hover:text-white-700 hover:underline cursor-pointer"
+                  className="text-black text-lg font-semibold transition duration-300 hover:text-white hover:underline cursor-pointer"
                   target={d.newTab ? "_blank" : "_self"}
                   rel={d.newTab ? "noopener noreferrer" : ""}
                 >

@@ -21,7 +21,7 @@ const Mission = () => {
           </div>
 
           <div className="col-span-6">
-            <h1 className="text-center text-white font-semibold text-5xl py-3">
+            <h1 className="text-center text-orange-400 font-semibold text-5xl py-3">
               Our Mission
             </h1>
             <h2 className="text-white text-lg md:text-xl lg:text-2xl max-w-prose">
@@ -44,11 +44,11 @@ const Mission = () => {
         style={{ backgroundImage: "url(/about/Bg-about.jpg)" }}
       >
         <div className="lg:grid lg:grid-cols-12 relative items-center justify-center w-full h-full p-8 text-center bg-black bg-opacity-50">
-          <div className="col-span-8">
-            <h1 className="text-center text-white font-semibold text-5xl py-3">
+          <div className="col-span-12 lg:col-span-8 mb-8 lg:mb-0">
+            <h1 className="text-center text-orange-400 font-semibold text-5xl py-3">
               Our Vision
             </h1>
-            <h2 className="text-white text-lg md:text-xl lg:text-2xl max-w-prose">
+            <h2 className="text-white text-lg md:text-xl lg:text-2xl max-w-prose mx-auto">
               Our goal at JSR PVT LTD is to help people and businesses succeed
               by providing great insight into the stock market, high quality
               health insurance, expert legal advice and high quality listed
@@ -56,12 +56,12 @@ const Mission = () => {
               these areas, driving our clients’ growth and success. Focusing on
               excellence, personalized service and understanding our clients’
               needs, we aim to grow their business and personal careers,
-              ensuring they thrive in an ever-changing market.
+              ensuring they thrive in an ever-changing market.
             </h2>
           </div>
 
-          <div className="col-span-4 px-20">
-            <div className="mb-8 lg:mb-0 lg:mr-8 flex-shrink-0">
+          <div className="col-span-12 lg:col-span-4 flex justify-center lg:justify-end px-20">
+            <div className="flex-shrink-0">
               <Image
                 src="/about/vision.png"
                 width={300}
