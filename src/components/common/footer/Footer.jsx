@@ -3,8 +3,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaInstagram } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
-// import { CiLinkedin } from "react-icons/ci";
 import { FaPinterest } from "react-icons/fa";
+import { FaSquareXTwitter } from "react-icons/fa6";
+import { FaYoutube } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -68,7 +69,8 @@ const Footer = () => {
 
             <div>
               <Link
-                href="https://maps.app.goo.gl/m9QsWKnZU1Ka7eFV6" target="__blank"
+                href="https://maps.app.goo.gl/m9QsWKnZU1Ka7eFV6"
+                target="__blank"
                 className="transition duration-300 ease-in-out hover:text-blue-600"
               >
                 G-36 First Floor, Connaught Cir, Block G, Connaught Place, New
@@ -91,15 +93,22 @@ const Footer = () => {
               >
                 <FaFacebook className="bg-black rounded-full text-white p-1.5 hover:text-orange-500" />
               </Link>
-
-              {/* <Link href={"/"} target="_blank">
-              <CiLinkedin className="bg-black rounded-full text-white p-1.5 hover:text-orange-500" />
-            </Link> */}
               <Link
                 href={"https://in.pinterest.com/jsr23031991/"}
                 target="_blank hover"
               >
                 <FaPinterest className="bg-black rounded-full text-white p-1.5 hover:text-orange-500" />
+              </Link>
+
+              <Link href={"https://x.com/Jsr23031991"} target="_blank hover">
+                <FaSquareXTwitter className="bg-black rounded-full text-white p-1.5 hover:text-orange-500" />
+              </Link>
+
+              <Link
+                href={"https://www.youtube.com/@Jsr_Pvt_Ltd"}
+                target="_blank hover"
+              >
+                <FaYoutube className="bg-black rounded-full text-white p-1.5 hover:text-orange-500" />
               </Link>
             </div>
           </div>

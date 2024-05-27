@@ -10,6 +10,8 @@ import Link from "next/link";
 import { FaInstagram } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import { FaPinterest } from "react-icons/fa";
+import { FaSquareXTwitter } from "react-icons/fa6";
+import { FaYoutube } from "react-icons/fa";
 
 const Contact = () => {
   const router = useRouter();
@@ -80,16 +82,17 @@ const Contact = () => {
                 </p>
               </Link>
             </div>
-            <Link href={"https://maps.app.goo.gl/m9QsWKnZU1Ka7eFV6"} target="__blank">
-            <div className="flex items-center space-x-4">
-              
+            <Link
+              href={"https://maps.app.goo.gl/m9QsWKnZU1Ka7eFV6"}
+              target="__blank"
+            >
+              <div className="flex items-center space-x-4">
                 <IoLocation className="text-6xl text-orange-500" />
                 <p className="text-lg text-gray-800 font-semibold">
                   G-36 First Floor, Connaught Cir, Block G, Connaught Place, New
                   Delhi, Delhi 110001
                 </p>
-             
-            </div>
+              </div>
             </Link>
           </div>
 
@@ -126,9 +129,20 @@ const Contact = () => {
             </Link> */}
                 <Link
                   href={"https://in.pinterest.com/jsr23031991/"}
-                  target="_blank hover" 
+                  target="_blank hover"
                 >
                   <FaPinterest className="bg-black rounded-full text-white p-1.5 hover:text-orange-500" />
+                </Link>
+
+                <Link href={"https://x.com/Jsr23031991"} target="_blank hover">
+                  <FaSquareXTwitter className="bg-black rounded-full text-white p-1.5 hover:text-orange-500" />
+                </Link>
+
+                <Link
+                  href={"https://www.youtube.com/@Jsr_Pvt_Ltd"}
+                  target="_blank hover"
+                >
+                  <FaYoutube className="bg-black rounded-full text-white p-1.5 hover:text-orange-500" />
                 </Link>
               </div>
             </div>

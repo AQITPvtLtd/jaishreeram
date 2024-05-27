@@ -53,10 +53,10 @@ const Navbar = () => {
   );
 
   return (
-    <nav className="bg-white p-4">
+    <nav className="bg-white p-4 overflow-x-hidden">
       <div className="container mx-auto grid grid-cols-12 items-center">
         <div className="col-start-1 col-span-2 md:col-start-3 md:col-span-2">
-          <Image src="/logo/jsrLogo.webp" width={150} height={150} alt="Logo" />
+          <Image src="/logo/jsrLogo.webp" width={120} height={120} alt="Logo" />
         </div>
 
         <div className="col-span-8 hidden md:flex md:col-span-6 justify-center space-x-8">
