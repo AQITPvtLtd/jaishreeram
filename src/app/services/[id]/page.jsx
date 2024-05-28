@@ -1,5 +1,5 @@
 import React from "react";
-import Servicedata from "./servicedata";
+import Servicedata from "./Servicedata";
 
 const page = ({ params }) => {
   const id = params.id;

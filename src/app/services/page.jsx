@@ -1,5 +1,5 @@
 import React from 'react'
-import Jsrservice from './jsrservice'
+import Jsrservice from './Jsrservice'
 
 const page = () => {
   return (

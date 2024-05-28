@@ -1,5 +1,5 @@
 import About from "@/components/homepage/about/About";
-import Services from "@/components/homepage/services/services";
+import Services from "@/components/homepage/services/Services";
 import Slider from "@/components/homepage/slider/Slider";
 import WhyChooseUs from "@/components/homepage/whychooseus/WhyChooseUs";
 import Contact from "./contactus/Contact";
