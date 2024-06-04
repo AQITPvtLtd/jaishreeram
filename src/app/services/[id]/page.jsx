@@ -4,7 +4,7 @@ import Servicedata from "./Servicedata";
 const page = ({ params }) => {
   const id = params.id;
   return (
-    <div className="py-20 mt-[200px]">
+    <div className="py-20 mt-[150px]">
       <Servicedata id={id} />
     </div>
   );

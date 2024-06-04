@@ -10,26 +10,23 @@ const Servicedata = ({ id }) => {
   }
 
   return (
-    <div className="bg-gray-100 p-6 rounded-lg shadow-md">
-      <div key={obj.id}>
-        {/* Display the image if it exists */}
-        <div className="lg:grid grid-cols-12 gap-4">
-          <div className="lg:col-start-2 col-span-4 relative overflow-hidden rounded-md ">
-            {obj.image && (
-              <Image
-                src={`${obj.image}`}
-                alt={obj.name}
-                width={350}
-                height={350}
-                className="rounded-md"
-              />
-            )}
-          </div>
-
-          <div className="lg:col-span-5 flex flex-col justify-center">
-            <h1 className="text-2xl font-semibold py-1">{obj.title}</h1>
-            <p className="text-gray-700 font-semibold mt-4">{obj.description}</p>
-          </div>
+    <div className="p-6 rounded-lg shadow-lg bg-gradient-to-r from-orange-500 to-orange-700 overflow-hidden">
+      <div key={obj.id} className="grid lg:grid-cols-3 gap-4 items-center">
+        <div className="relative overflow-hidden rounded-lg transform transition duration-500 hover:scale-105">
+          {obj.image && (
+            <Image
+              src={`${obj.image}`}
+              alt={obj.name}
+              width={1000}
+              height={1000}
+              className="rounded-lg"
+            />
+          )}
+        </div>
+  
+        <div className="lg:col-span-2 flex flex-col justify-center bg-white p-6 rounded-lg shadow-inner overflow-hidden">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">{obj.title}</h1>
+          <p className="text-gray-700 text-lg">{obj.description}</p>
         </div>
       </div>
     </div>

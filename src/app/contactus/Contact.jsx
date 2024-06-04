@@ -67,27 +67,33 @@ const Contact = () => {
         <div className="col-start-3 col-span-4">
           <div className="space-y-6 lg:mr-10 p-6 mt-20 bg-white rounded-lg shadow-md animate-slideIn">
             <Link href="tel:+91 9582-930-940" target="__blank">
-              <div className="flex items-center space-x-4">
-                <IoCall className="text-4xl text-orange-500" />
+              <div className="flex items-center space-x-4 py-1">
+                <IoCall className="text-3xl text-orange-500" />
                 <p className="text-lg text-gray-800 font-semibold">
                   +91 9582-930-940
                 </p>
               </div>
             </Link>
+
+            <Link href="mailto:info@jsrpvtltd.com" target="__balnk">
             <div className="flex items-center space-x-4">
-              <MdEmail className="text-4xl text-orange-500" />
-              <Link href="mailto:info@jsrpvtltd.com" target="__balnk">
+              <MdEmail className="text-3xl text-orange-500" />
+              
                 <p className="text-lg text-gray-800 font-semibold">
                   info@jsrpvtltd.com
                 </p>
-              </Link>
+              
             </div>
+            </Link>
+
             <Link
               href={"https://maps.app.goo.gl/m9QsWKnZU1Ka7eFV6"}
               target="__blank"
             >
-              <div className="flex items-center space-x-4">
-                <IoLocation className="text-6xl text-orange-500" />
+              <div className="flex items-center space-x-4 py-1">
+                <div>
+                <IoLocation className="text-3xl text-orange-500" />
+                </div>
                 <p className="text-lg text-gray-800 font-semibold">
                   G-36 First Floor, Connaught Cir, Block G, Connaught Place, New
                   Delhi, Delhi 110001
@@ -102,7 +108,7 @@ const Contact = () => {
                 Connect with Us on Social Media
               </h1>
               <p className="font-semibold">
-                Stay informed with the latest news and insights from Calcya by
+                Stay informed with the latest news and insights from JSR by
                 connecting with us on social media. Join the conversation and
                 engage with our community.
               </p>
