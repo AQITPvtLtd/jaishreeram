@@ -1,5 +1,5 @@
 import React from "react";
-import { data } from "../information";
+import { data } from "../../../components/homepage/services/information";
 import Image from "next/image";
 
 const Servicedata = ({ id }) => {
@@ -24,7 +24,7 @@ const Servicedata = ({ id }) => {
           )}
         </div>
   
-        <div className="lg:col-span-2 flex flex-col justify-center bg-white p-6 rounded-lg shadow-inner overflow-hidden">
+        <div className="lg:col-span-2 flex flex-col justify-center bg-white p-6 rounded-lg shadow-inner   overflow-hidden">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">{obj.title}</h1>
           <p className="text-gray-700 text-lg">{obj.description}</p>
         </div>

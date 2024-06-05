@@ -20,7 +20,7 @@ const data = [
     icon:<AiOutlineSolution />,
     title: "Comprehensive Solutions",
     description:
-      "From conducting thorough market research for your stock investments to handling complex legal matters, securing the right insurance policies, and facilitating property transactions.",
+      "From conducting through market research for your stock investments to handling complex legal matters, securing the right insurance policies, and facilitating property transactions.",
   },
   {
     icon:<AiOutlineUsergroupAdd />

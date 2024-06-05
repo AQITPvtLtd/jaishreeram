@@ -26,14 +26,12 @@ const Mission = () => {
             </h1>
             <h2 className="text-white text-lg md:text-xl lg:text-2xl max-w-prose">
               Our mission at JSR PVT LTD is to provide high quality services in
-              the areas of stock market updates, health insurance, legal advice,
-              and real estate matters. We guide our clients every step of the
+              the areas of Stock market updates, Health And Life Insurance, JSR Associates, Financial Services, Legal Advice, Company Registration,
+              and Real Estate Matters. We guide our clients every step of the
               way with innovative systems, personalized solutions, and expert
               advice. Leveraging our deep industry expertise and commitment to
               excellence, we aim to build lasting relationships based on trust
-              and success. Our goal is to help our clients achieve their
-              financial, health, legal, and property goals, and ensure they
-              thrive in a rapidly changing and competitive world.
+              and success.
             </h2>
           </div>
         </div>
