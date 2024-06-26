@@ -9,6 +9,7 @@ import { FaYoutube } from "react-icons/fa";
 import { MdOutlineEmail } from "react-icons/md";
 import { FaPhone } from "react-icons/fa6";
 import { MdLocationPin } from "react-icons/md";
+
 const Footer = () => {
   return (
     <div className="bg-gray-200"> 
@@ -120,7 +121,7 @@ const Footer = () => {
                 className="bg-black rounded-full text-white p-1.5 hover:text-orange-500"
               >
                 <FaYoutube />
-              </Link>
+              </Link> 
             </div>
           </div>
         </div>

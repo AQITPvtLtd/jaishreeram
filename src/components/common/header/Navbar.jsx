@@ -59,7 +59,8 @@ const Navbar = () => {
     <nav className="bg-white overflow-x-hidden">
       <div className="container mx-auto grid grid-cols-12 items-center">
         <div className="col-start-1 col-span-2 md:col-start-3 md:col-span-2">
-          <Image src="/logo/jsrLogo.png" width={120} height={120} alt="Logo" />
+          <a href="/">
+          <Image src="/logo/jsrLogo.png" width={120} height={120} alt="Logo"/></a>
         </div>
 
         <div className="col-span-8 hidden md:flex md:col-span-6 justify-center space-x-8">
@@ -71,7 +72,7 @@ const Navbar = () => {
                 target={d.newTab ? "_blank" : "_self"}
                 rel={d.newTab ? "noopener noreferrer" : ""}
               >
-                <span className="inline-block hover:text-orange-400 hover:underline">{d.title}</span>
+                <span className="inline-block hover:text-orange-400 ">{d.title}</span>
                 <UnderlineAnimation isActive={isOpen} />
               </div>
             </Link>
