@@ -30,6 +30,12 @@ const data = [
   },
   {
     id: 5,
+    title: "Blogs",
+    newTab: false,
+    path: "/blogs",
+  },
+  {
+    id: 6,
     title: "Contact Us",
     newTab: false,
     path: "/contactus",
@@ -51,28 +57,37 @@ const Navbar = () => {
     <div
       className={`transition-all duration-300 ease-in-out ${
         isActive ? "w-full" : "w-0"
-      } absolute bottom-0 left-0 h-1 bg-orange-400`}
+      } bottom-0 left-0 h-1 bg-orange-400`}
     />
   );
 
   return (
     <nav className="bg-white overflow-x-hidden">
-      <div className="container mx-auto grid grid-cols-12 items-center">
+      <div className="container flex justify-center items-center">
         <div className="col-start-1 col-span-2 md:col-start-3 md:col-span-2">
           <a href="/">
-          <Image src="/logo/jsrLogo.png" width={120} height={120} alt="Logo"/></a>
+            <Image
+              src="/logo/logo.png"
+              width={1000}
+              height={1000}
+              alt="Logo"
+              className="h-[110px] w-[160px] p-2 mr-4"
+            />
+          </a>
         </div>
 
-        <div className="col-span-8 hidden md:flex md:col-span-6 justify-center space-x-8">
+        <div className=" hidden md:flex justify-center space-x-8">
           {data.map((d) => (
             <Link key={d.id} href={d.path} passHref>
               <div
-                className="relative group text-black text-lg font-semibold cursor-pointer transition duration-300 ease-in-out transform hover:scale-105"
+                className=" group text-black text-lg font-semibold cursor-pointer transition duration-300 ease-in-out transform hover:scale-105"
                 onClick={handleLinkClick}
                 target={d.newTab ? "_blank" : "_self"}
                 rel={d.newTab ? "noopener noreferrer" : ""}
               >
-                <span className="inline-block hover:text-orange-400 ">{d.title}</span>
+                <span className="inline-block hover:text-orange-400 ">
+                  {d.title}
+                </span>
                 <UnderlineAnimation isActive={isOpen} />
               </div>
             </Link>

@@ -1,34 +1,26 @@
-import connection from "@/helper/db";
 import { NextResponse } from "next/server";
-import nodemailer from "nodemailer";
 import { v4 as uuid } from "uuid";
+import nodemailer from "nodemailer";
+import pool from "@/helper/db"; // Ensure this points to your connection pool
 
-export async function POST(request) {
-  console.log("hello");
+export const POST = async (request) => {
+  const { Fname, Lname, Email, Phone, Message } = await request.json();
+  const id = uuid();
+  let connection; // Declare a variable to hold the connection
   try {
-    const { Fname, Lname, Email, Phone, Message } = await request.json();
-    const unique_id = uuid();
+    // Get a connection from the pool
+    connection = await pool.getConnection();
 
-    // Insert data into the database
-    await new Promise((resolve, reject) => {
-      connection.query(
-        "INSERT INTO jsram (id, Fname ,Lname ,Email ,Phone ,Message) VALUES (?, ?, ?, ?, ? ,?)",
-        [unique_id, Fname , Lname , Email, Phone, Message],
-        (err, results, fields) => {
-          if (err) {
-            console.error(err);
-            reject(err);
-          } else {
-            resolve(results);
-          }
-        }
-      );
-    });
+    // Insert data into MySQL database
+    const [rows] = await connection.query(
+      "INSERT INTO jsram (id, Fname, Lname, Phone, Email, Message) VALUES (?, ?, ?, ?, ?, ?)",
+      [id, Fname, Lname, Phone, Email, Message]
+    );
 
-    // Send email using nodemailer
+    // Nodemailer configuration for sending emails
     const transporter = nodemailer.createTransport({
       service: "gmail",
-      host: "abhi.gmail.com",
+      host: "smtp.gmail.com",
       secure: true,
       auth: {
         user: process.env.MY_EMAIL,
@@ -36,26 +28,39 @@ export async function POST(request) {
       },
     });
 
-    const mailOptions = {
+    // Send email to admin
+    await transporter.sendMail({
       from: process.env.MY_EMAIL,
       to: process.env.MY_EMAIL,
-     
-      text: `Fname: ${Fname}\n Lname: ${Lname} \nEmail: ${Email} \nPhone: ${Phone}  \nMessage: ${Message}`,
-    };
+      subject: "JSR Contact form",
+      html: `<html>
+                <body>
+                  <h3>You've got a new mail from ${Fname} ${Lname}, their email is: ✉️${Email}, their phone number is: ${Phone}</h3>
+                  <p>Message:</p>
+                  <p>${Message}</p>
+                </body>
+              </html>`,
+    });
 
-    transporter.sendMail(mailOptions);
+    // Send confirmation email to the user
+    await transporter.sendMail({
+      from: process.env.MY_EMAIL,
+      to: Email,
+      subject: "Thank You for contacting JSR!",
+      html: `<html>
+              <body>
+                <h2>Hey ${Fname},</h2>
+                <p>Your query is noted! Our team will contact you as soon as possible.</p>
+              </body>
+             </html>`,
+    });
 
     // Return success response
-    return NextResponse.json({
-      message: "Query sent",
-      success: true,
-    });
+    return NextResponse.json({ Message: "Success", success: true });
   } catch (error) {
-    console.error("Error:", error.message);
-    // Return error response
-    return NextResponse.json({
-      message: "Failed to send query",
-      success: false,
-    });
+    console.error("Error occurred: ", error);
+    return NextResponse.json({ Message: "Failed", success: false });
+  } finally {
+    if (connection) connection.release(); // Always release the connection back to the pool if it was acquired
   }
-}
+};
