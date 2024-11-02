@@ -4,12 +4,14 @@ import React, { useEffect, useState } from "react";
 import { getBlogData } from "@/services/blogdata";
 import Link from "next/link";
 import Image from "next/image";
+import Moment from "react-moment";
+import { SlCalender } from "react-icons/sl";
 const Blogs = () => {
   const [blog, setBlog] = useState([]);
   useEffect(() => {
     const getData = async () => {
       const data = await getBlogData();
-      setBlog(data.result);
+      setBlog(data.result.reverse());
     };
     getData();
   }, []);
@@ -45,6 +47,10 @@ const BlogCards = ({ blog }) => {
             {blog.title}
           </h5>
         </Link>
+        <p className="text-gray-600 flex">
+          <SlCalender className="text-primary mt-1 mr-1" />
+          <Moment format="MMMM DD, YYYY">{blog?.date}</Moment>
+        </p>
         <p className="mb-3 font-normal text-gray-700"></p>
         <Link
           href={`/blogs/${url}`}
