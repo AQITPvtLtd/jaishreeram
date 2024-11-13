@@ -12,11 +12,16 @@ import { MdLocationPin } from "react-icons/md";
 
 const Footer = () => {
   return (
-    <div className="bg-gray-200"> 
+    <div className="bg-gray-200">
       <footer className="text-gray-800 py-8 md:py-10 lg:py-12 mt-5">
         <div className="container mx-auto grid grid-cols-1 md:grid-cols-12 gap-8">
           <div className="col-span-1 md:col-start-2 md:col-span-3 flex flex-col items-center md:items-start">
-            <Image src={"/logo/jsrlogo1.png"} width={125} height={125} alt="JSR Logo" />
+            <Image
+              src={"/logo/jsrlogo1.png"}
+              width={125}
+              height={125}
+              alt="JSR Logo"
+            />
             <p className="mt-4 text-center md:text-left">
               JSR Pvt Ltd is your trusted partner across various sectors
               including insurance, residential, and legal services.
@@ -81,7 +86,8 @@ const Footer = () => {
               >
                 <MdLocationPin className="bg-black rounded-full text-white p-1.5 text-3xl md:text-4xl hover:text-orange-500" />
                 <p className="ml-2 text-base md:text-lg">
-                  G-36 First Floor, Connaught Cir, Block G, <br /> Connaught Place, New Delhi, Delhi 110001
+                  G-36 First Floor, Connaught Cir, Block G, <br /> Connaught
+                  Place, New Delhi, Delhi 110001
                 </p>
               </Link>
             </div>
@@ -121,17 +127,14 @@ const Footer = () => {
                 className="bg-black rounded-full text-white p-1.5 hover:text-orange-500"
               >
                 <FaYoutube />
-              </Link> 
+              </Link>
             </div>
           </div>
         </div>
       </footer>
       <p className="text-center font-semibold p-3">
-        <Link
-          href={"https://maps.app.goo.gl/1LJXAzzP89nMtYCv8"}
-          target="_blank"
-        >
-          Design & Develope By Tek Booster (Digital Marketing Company)
+        <Link href={"https://tekbooster.com"} target="_blank">
+          Design & Developed By Tek Booster (Digital Marketing Company)
         </Link>
       </p>
     </div>
