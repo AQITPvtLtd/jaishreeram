@@ -9,9 +9,10 @@ const About = () => {
       <div className="w-full h-[500px] overflow-hidden relative">
         <Image
           src="/about/aboutbg.png"
-          layout="fill"
           objectFit="cover"
           alt="Business"
+          width={1000}
+          height={1000}
         />
         <div className="absolute inset-0 flex items-center justify-center flex-col text-center">
           <h1 className="text-4xl sm:text-9xl font-bold mb-4 text-white">

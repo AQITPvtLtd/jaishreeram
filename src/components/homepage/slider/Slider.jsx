@@ -11,9 +11,9 @@ const Slider = () => {
         <Image
           src="/slider/slide.jpg"
           alt="Slider Image"
-          layout="fill"
-          objectFit="cover"
-          className="w-full h-full"
+          width={1000}
+          height={1000}
+          className="w-full h-full object-fill"
         />
       </div>
 
@@ -22,11 +22,15 @@ const Slider = () => {
           onEnter={() => setAnimate(true)}
           onExit={() => setAnimate(false)}
         >
-          <div  className={`${
-                animate && "animate__zoomIn animate__slower animate__animated"
-              }`}>
+          <div
+            className={`${
+              animate && "animate__zoomIn animate__slower animate__animated"
+            }`}
+          >
             <h1
-              className={"lg:text-7xl md:text-5xl sm:text-5xl font-semibold p-4"}
+              className={
+                "lg:text-7xl md:text-5xl sm:text-5xl font-semibold p-4"
+              }
             >
               JSR PVT LTD
             </h1>
