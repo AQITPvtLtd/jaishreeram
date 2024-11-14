@@ -42,7 +42,11 @@ const BlogDetailed = ({ url }) => {
                 Team JaiShreeRam
               </p>
             </div>
-            <div className="mt-4  rounded-lg text-justify">
+            <div className="mt-7 mx-24 bg-gray-200 px-10 pt-3 rounded-lg text-justify">
+              <div className="text-2xl text-center mt-4 mb-2">
+                {filteredArticle?.title}
+              </div>
+              <div className="border border-blue-800 mx-10 mb-4"></div>
               <div
                 dangerouslySetInnerHTML={{
                   __html: filteredArticle?.content,
