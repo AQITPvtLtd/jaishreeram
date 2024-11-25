@@ -11,12 +11,14 @@ const Services = () => {
           <div
             key={d.id}
             className="bg-white shadow-md hover:shadow-lg rounded-lg overflow-hidden p-6 transition-transform transform hover:scale-105 flex flex-col"
+            style={{ height: "100%" }}
           >
-            <div className="relative w-full h-40 mb-4">
+            <div className="w-full h-64 mb-4">
+              {/* Ensuring images are the same size */}
               <Image
                 src={`${d.image}`}
                 alt={d.title}
-                className="rounded object-cover"
+                className="rounded object-cover w-full h-full"
                 width={1000}
                 height={1000}
               />
@@ -24,7 +26,7 @@ const Services = () => {
             <h2 className="text-2xl font-semibold mb-2 text-center">
               {d.title}
             </h2>
-            <p className="text-lg mb-4 text-center  line-clamp-3">
+            <p className="text-lg mb-4 text-center line-clamp-3">
               {d.description}
             </p>
             <div className="mt-auto">
