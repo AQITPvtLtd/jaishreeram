@@ -63,29 +63,27 @@ const Navbar = () => {
 
   return (
     <nav className="bg-white overflow-x-hidden">
-      <div className="container flex justify-center items-center">
-        <div className="col-start-1 col-span-2 md:col-start-3 md:col-span-2">
-          <a href="/">
-            <Image
-              src="/logo/logo.png"
-              width={1000}
-              height={1000}
-              alt="Logo"
-              className="h-[110px] w-[160px] p-2 mr-4"
-            />
-          </a>
-        </div>
+      <div className="container flex justify-center items-center gap-44">
+        <Link href={"/"}>
+          <Image
+            src="/logo/logo.png"
+            width={1000}
+            height={1000}
+            alt="Logo"
+            className="h-[110px] w-[160px] p-2"
+          />
+        </Link>
 
         <div className=" hidden md:flex justify-center space-x-8">
           {data.map((d) => (
             <Link key={d.id} href={d.path} passHref>
               <div
-                className=" group text-black text-lg font-semibold cursor-pointer transition duration-300 ease-in-out transform hover:scale-105"
+                className=" group text-black text-lg font-semibold cursor-pointer transition duration-300 ease-in-out transform hover:scale-125"
                 onClick={handleLinkClick}
                 target={d.newTab ? "_blank" : "_self"}
                 rel={d.newTab ? "noopener noreferrer" : ""}
               >
-                <span className="inline-block hover:text-orange-400 ">
+                <span className="inline-block hover:text-orange-400 px-10 lg:px-0">
                   {d.title}
                 </span>
                 <UnderlineAnimation isActive={isOpen} />

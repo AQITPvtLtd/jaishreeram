@@ -5,40 +5,32 @@ import Mission from "./Mission&Vission";
 
 const About = () => {
   return (
-    <div className="mt-[200px]">
-      <div className="w-full h-[500px] overflow-hidden relative">
-        <Image
-          src="/about/aboutbg.png"
-          objectFit="cover"
-          alt="Business"
-          width={1000}
-          height={1000}
-        />
-        <div className="absolute inset-0 flex items-center justify-center flex-col text-center">
-          <h1 className="text-4xl sm:text-9xl font-bold mb-4 text-white">
-            About
-          </h1>
-          <h2 className="text-4xl lg:text-5xl font-semibold mb-4 text-white">
-            JSR PRIVATE LIMITED
-          </h2>
-        </div>
-      </div>
-
-      <div className="container mx-auto px-4 lg:px-8 py-12">
-        <div className="text-center"></div>
-
-        {/* Text Section */}
-        <div className="px-4 lg:px-0">
-          <p className="text-lg lg:text-xl leading-relaxed text-center animate__fadeInUp">
-            JSR Pvt Ltd is your trusted partner across various sectors including
-            insurance, residential, and legal services. Whether it’s
-            safeguarding your assets with our insurance solutions, finding your
-            dream home, or obtaining top-notch legal advice and representation,
-            we’ve got you covered. With our commitment to excellence and
-            customer satisfaction, JSR Pvt Ltd is dedicated to providing
-            comprehensive services tailored to meet your specific needs in the
-            insurance, residential, and legal sectors.
-          </p>
+    <div className="mt-[200px] px-5">
+      <div className="pb-8">
+        <div
+          className="relative w-full h-full overflow-hidden bg-cover bg-center mt-8 rounded-2xl"
+          style={{ backgroundImage: "url(/about/aboutbg.png)" }}
+        >
+          <div className=" relative items-center justify-center w-full h-full p-8 text-center bg-black bg-opacity-50 flex flex-col-reverse">
+            <div className="mb-8 lg:mb-0">
+              <h1 className="text-center text-orange-400 font-semibold text-3xl">
+                About us
+              </h1>
+              <h1 className="text-center text-orange-400 font-semibold text-5xl py-3">
+                JSR Private Limited
+              </h1>
+              <h2 className="text-white text-lg md:text-xl lg:text-2xl max-w-prose">
+                JSR Pvt Ltd is your trusted partner across various sectors
+                including insurance, residential, and legal services. Whether
+                it’s safeguarding your assets with our insurance solutions,
+                finding your dream home, or obtaining top-notch legal advice and
+                representation, we’ve got you covered. With our commitment to
+                excellence and customer satisfaction, JSR Pvt Ltd is dedicated
+                to providing comprehensive services tailored to meet your
+                specific needs in the insurance, residential, and legal sectors.
+              </h2>
+            </div>
+          </div>
         </div>
       </div>
 

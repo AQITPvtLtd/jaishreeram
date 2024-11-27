@@ -65,7 +65,13 @@ const Contact = () => {
       </h3>
       <div className="lg:grid grid-cols-12">
         <div className="col-start-3 col-span-4">
-          <div className="space-y-6 lg:mr-10 p-6 mt-20 bg-white rounded-lg shadow-md animate-slideIn">
+          <div
+            className="space-y-6 lg:mr-10 p-6 mt-20 bg-white rounded-lg shadow-md animate-slideIn"
+            style={{
+              boxShadow:
+                "rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px",
+            }}
+          >
             <Link href="tel:+91 9582-930-940" target="__blank">
               <div className="flex items-center space-x-4 py-1">
                 <IoCall className="text-3xl text-orange-500" />
@@ -76,14 +82,13 @@ const Contact = () => {
             </Link>
 
             <Link href="mailto:info@jsrpvtltd.com" target="__balnk">
-            <div className="flex items-center space-x-4">
-              <MdEmail className="text-3xl text-orange-500" />
-              
+              <div className="flex items-center space-x-4">
+                <MdEmail className="text-3xl text-orange-500" />
+
                 <p className="text-lg text-gray-800 font-semibold">
                   info@jsrpvtltd.com
                 </p>
-              
-            </div>
+              </div>
             </Link>
 
             <Link
@@ -92,7 +97,7 @@ const Contact = () => {
             >
               <div className="flex items-center space-x-4 py-1">
                 <div>
-                <IoLocation className="text-3xl text-orange-500" />
+                  <IoLocation className="text-3xl text-orange-500" />
                 </div>
                 <p className="text-lg text-gray-800 font-semibold">
                   G-36 First Floor, Connaught Cir, Block G, Connaught Place, New
@@ -103,7 +108,13 @@ const Contact = () => {
           </div>
 
           <div>
-            <div className="text-center mt-4 lg:mr-10 p-6 bg-white rounded-lg shadow-md animate-slideIn">
+            <div
+              className="text-center mt-4 lg:mr-10 p-6 bg-white rounded-lg shadow-md animate-slideIn"
+              style={{
+                boxShadow:
+                  "rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px",
+              }}
+            >
               <h1 className="text-2xl font-semibold py-2">
                 Connect with Us on Social Media
               </h1>
@@ -118,6 +129,11 @@ const Contact = () => {
                     "https://www.instagram.com/jsr_pvt_ltd/?igsh=MTU1cDdwbGVpeHp6cg%3D%3D"
                   }
                   target="_blank"
+                  style={{
+                    boxShadow:
+                      "rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px",
+                  }}
+                  className="rounded-full"
                 >
                   <FaInstagram className="bg-black rounded-full text-white p-1.5 hover:text-orange-500" />
                 </Link>
@@ -126,6 +142,11 @@ const Contact = () => {
                     "https://www.facebook.com/profile.php?id=61558692683271"
                   }
                   target="_blank"
+                  style={{
+                    boxShadow:
+                      "rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px",
+                  }}
+                  className="rounded-full"
                 >
                   <FaFacebook className="bg-black rounded-full text-white p-1.5 hover:text-orange-500" />
                 </Link>
@@ -136,17 +157,35 @@ const Contact = () => {
                 <Link
                   href={"https://in.pinterest.com/jsr23031991/"}
                   target="_blank hover"
+                  style={{
+                    boxShadow:
+                      "rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px",
+                  }}
+                  className="rounded-full"
                 >
                   <FaPinterest className="bg-black rounded-full text-white p-1.5 hover:text-orange-500" />
                 </Link>
 
-                <Link href={"https://x.com/Jsr23031991"} target="_blank hover">
+                <Link
+                  href={"https://x.com/Jsr23031991"}
+                  target="_blank hover"
+                  style={{
+                    boxShadow:
+                      "rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px",
+                  }}
+                  className="rounded-full"
+                >
                   <FaSquareXTwitter className="bg-black rounded-full text-white p-1.5 hover:text-orange-500" />
                 </Link>
 
                 <Link
                   href={"https://www.youtube.com/@Jsr_Pvt_Ltd"}
                   target="_blank hover"
+                  style={{
+                    boxShadow:
+                      "rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px",
+                  }}
+                  className="rounded-full"
                 >
                   <FaYoutube className="bg-black rounded-full text-white p-1.5 hover:text-orange-500" />
                 </Link>
@@ -176,6 +215,10 @@ const Contact = () => {
           <form
             className="bg-white text-gray-800 p-8 rounded-lg shadow-md w-full max-w-lg"
             onSubmit={handleSubmit}
+            style={{
+              boxShadow:
+                "rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px",
+            }}
           >
             <div className="mb-6">
               <label htmlFor="Fname" className="block text-md font-medium mb-2">

@@ -13,7 +13,7 @@ import { MdLocationPin } from "react-icons/md";
 const Footer = () => {
   return (
     <div className="bg-gray-200">
-      <footer className="text-gray-800 py-8 md:py-10 lg:py-12 mt-5">
+      <footer className="text-gray-800 py-8 md:py-10 lg:py-12 mt-5 md:px-0 px-5">
         <div className="container mx-auto grid grid-cols-1 md:grid-cols-12 gap-8">
           <div className="col-span-1 md:col-start-2 md:col-span-3 flex flex-col items-center md:items-start">
             <Image
