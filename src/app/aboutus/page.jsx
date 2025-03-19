@@ -16,7 +16,7 @@ const About = () => {
               <h1 className="text-center text-orange-400 font-semibold text-3xl">
                 About us
               </h1>
-              <h1 className="text-center text-orange-400 font-semibold text-5xl py-3">
+              <h1 className="text-center text-orange-400 font-semibold text-3xl py-3">
                 JSR Private Limited
               </h1>
               <h2 className="text-white text-lg md:text-xl lg:text-2xl max-w-prose">

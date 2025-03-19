@@ -57,16 +57,16 @@ const Contact = () => {
 
   return (
     <div className="text-black">
-      <h1 className="text-center text-6xl font-semibold px-10 py-4">
+      <h1 className="text-center text-3xl font-semibold px-10 pt-4">
         Contact Us
       </h1>
-      <h3 className="text-center text-3xl font-semibold">
+      <h3 className="text-center text-xl">
         Book Your Free Consultation Now
       </h3>
       <div className="lg:grid grid-cols-12">
         <div className="col-start-3 col-span-4">
           <div
-            className="space-y-6 lg:mr-10 p-6 mt-20 bg-white rounded-lg shadow-md animate-slideIn"
+            className="space-y-6 lg:mr-10 p-6 mt-10 bg-white rounded-lg shadow-md animate-slideIn"
             style={{
               boxShadow:
                 "rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px",
@@ -92,7 +92,7 @@ const Contact = () => {
             </Link>
 
             <Link
-              href={"https://maps.app.goo.gl/m9QsWKnZU1Ka7eFV6"}
+              href={"https://g.co/kgs/mGfSUGk"}
               target="__blank"
             >
               <div className="flex items-center space-x-4 py-1">
@@ -100,8 +100,7 @@ const Contact = () => {
                   <IoLocation className="text-3xl text-orange-500" />
                 </div>
                 <p className="text-lg text-gray-800 font-semibold">
-                  G-36 First Floor, Connaught Cir, Block G, Connaught Place, New
-                  Delhi, Delhi 110001
+                  Fourth floor, 2E, 4, Jhandewalan Extension, Delhi, 110055
                 </p>
               </div>
             </Link>

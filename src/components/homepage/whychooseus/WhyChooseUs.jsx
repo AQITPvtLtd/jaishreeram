@@ -33,10 +33,10 @@ const data = [
 const WhyChooseUs = () => {
   return (
     <div className="container mx-auto px-4">
-      <h1 className="text-4xl font-semibold text-center mt-10">
+      <h1 className="text-3xl font-semibold text-center mt-10">
         Why Choose Us
       </h1>
-      <p className="text-2xl font-medium text-center mb-8 text-orange-400">
+      <p className="text-xl text-center mb-8 text-orange-400">
         Your Trusted Partner in Success
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 pb-10">

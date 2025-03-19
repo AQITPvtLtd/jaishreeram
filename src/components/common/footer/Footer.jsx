@@ -15,7 +15,7 @@ const Footer = () => {
     <div className="bg-gray-200">
       <footer className="text-gray-800 py-8 md:py-10 lg:py-12 mt-5 md:px-0 px-5">
         <div className="container mx-auto grid grid-cols-1 md:grid-cols-12 gap-8">
-          <div className="col-span-1 md:col-start-2 md:col-span-3 flex flex-col items-center md:items-start">
+          <div className="md:col-start-1 md:col-span-3 flex flex-col items-center md:items-start">
             <Image
               src={"/logo/jsrlogo1.png"}
               width={125}
@@ -33,7 +33,7 @@ const Footer = () => {
             </Link>
           </div>
 
-          <div className="col-span-1 md:col-span-4">
+          <div className="md:col-start-6 md:col-span-2 mt-10">
             <h1 className="text-lg font-bold mb-4">Information</h1>
             <ul>
               <li className="mb-2 transition duration-300 ease-in-out hover:text-orange-500">
@@ -49,12 +49,15 @@ const Footer = () => {
                 <Link href="/whychooseus">Why Choose Us</Link>
               </li>
               <li className="mb-2 transition duration-300 ease-in-out hover:text-orange-500">
+                <Link href="/blogs">Blogs</Link>
+              </li>
+              <li className="mb-2 transition duration-300 ease-in-out hover:text-orange-500">
                 <Link href="/contactus">Contact Us</Link>
               </li>
             </ul>
           </div>
 
-          <div className="col-span-1 md:col-span-4">
+          <div className="md:col-start-9 md:col-span-4 mt-10">
             <h1 className="text-lg md:text-xl font-bold mb-4">Get In Touch</h1>
             <div className="mb-4">
               <Link
@@ -80,14 +83,14 @@ const Footer = () => {
 
             <div className="mb-4">
               <Link
-                href="https://maps.app.goo.gl/m9QsWKnZU1Ka7eFV6"
+                href="https://g.co/kgs/mGfSUGk"
                 target="_blank"
                 className="hover:text-orange-500 flex items-start"
               >
-                <MdLocationPin className="bg-black rounded-full text-white p-1.5 text-3xl md:text-4xl hover:text-orange-500" />
-                <p className="ml-2 text-base md:text-lg">
-                  G-36 First Floor, Connaught Cir, Block G, <br /> Connaught
-                  Place, New Delhi, Delhi 110001
+                <div>
+                  <MdLocationPin className="bg-black rounded-full text-white p-1.5 text-3xl md:text-4xl hover:text-orange-500" />
+                </div>   <p className="ml-2 text-base md:text-lg">
+                  Fourth floor, 2E, 4, Jhandewalan Extension, Delhi, 110055
                 </p>
               </Link>
             </div>
