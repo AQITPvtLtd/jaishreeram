@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 const Mission = () => {
   return (
-    <div>
+    <div className="px-5">
       <div
         className="relative w-full h-full overflow-hidden bg-cover bg-center rounded-2xl"
         style={{ backgroundImage: "url(/about/Bg-about.jpg)" }}
