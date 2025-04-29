@@ -59,7 +59,7 @@ const BlogDetailed = ({ id, url }) => {
                 Team JaiShreeRam
               </p>
             </div>
-            <div className="mt-7 mx-24 bg-gray-200 px-10 pt-3 rounded-lg text-justify">
+            <div className="mt-7 pb-7 mx-24 bg-gray-200 px-10 pt-3 rounded-lg text-justify">
               <div className="text-2xl text-center mt-4 mb-2">
                 {filteredArticle.title}
               </div>
@@ -73,7 +73,7 @@ const BlogDetailed = ({ id, url }) => {
             </div>
           </div>
         </div>
-        <div className="p-3 border m-4 rounded-md">
+        <div className="p-3 border m-4 rounded-md mt-16 h-fit">
           <h1 className="text-2xl font-bold text-primary">More Blogs</h1>
           <ul className="mt-3">
             {blog.map((a) => (
