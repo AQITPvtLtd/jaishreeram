@@ -3,7 +3,7 @@ import Contact from "./Contact";
 
 const page = () => {
   return (
-    <div className="mt-[200px]">
+    <div>
       <Contact />
 
       <div className="h-96 px-10">

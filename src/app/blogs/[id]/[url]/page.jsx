@@ -6,7 +6,7 @@ const page = ({ params }) => {
   const { id, url } = params;
   console.log("Extracted id and url:", { id, url }); // Check values
   return (
-    <div className="mt-[150px]">
+    <div>
       <BlogDetailed id={id} url={url} />
     </div>
   );

@@ -17,8 +17,8 @@ const Top = () => {
       </div>
       <div className="mb-4 md:mb-0">
         <h2 className="text-center md:text-left">
-          <a href="tel:91 9582-930-940" className="hover:text-orange-500">
-            CALL NOW! <span>+91 9582-930-940</span>
+          <a href="tel:+91 9990748899" className="hover:text-orange-500">
+            CALL NOW! <span>+91 99907 48899</span>
           </a>
         </h2>
       </div>

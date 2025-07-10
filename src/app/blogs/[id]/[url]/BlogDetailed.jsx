@@ -22,13 +22,13 @@ const BlogDetailed = ({ id, url }) => {
   }, []);
 
   // Debugging: Log the ID and URL passed in props
-  console.log("Received id and url:", { id, url });
+  // console.log("Received id and url:", { id, url });
 
   // Filter the article using both `id` and `url`
   const filteredArticle = blog?.find((a) => a.id == id && a.url == url);
 
   // Debugging: Log the filtered article
-  console.log("Filtered article:", filteredArticle);
+  // console.log("Filtered article:", filteredArticle);
 
   if (!filteredArticle) {
     return <p className="text-center text-red-500">Blog not found!</p>;
@@ -38,7 +38,7 @@ const BlogDetailed = ({ id, url }) => {
     <div className="overflow-x-hidden">
       <div className="lg:grid grid-cols-4">
         <div className="col-span-3 p-4 ">
-          <h1 className="lg:text-5xl text-3xl py-6 font-bold text-center text-primary">
+          <h1 className="lg:text-4xl text-3xl py-6 font-bold text-center text-primary" style={{ fontFamily: "Roboto Slab, serif" }}>
             {filteredArticle.title}
           </h1>
           <div>
@@ -60,7 +60,7 @@ const BlogDetailed = ({ id, url }) => {
               </p>
             </div>
             <div className="mt-7 pb-7 mx-24 bg-gray-200 px-10 pt-3 rounded-lg text-justify">
-              <div className="text-2xl text-center mt-4 mb-2">
+              <div className="text-2xl text-center mt-4 mb-2" style={{ fontFamily: "Roboto Slab, serif" }}>
                 {filteredArticle.title}
               </div>
               <div className="border border-blue-800 mx-10 mb-4"></div>
@@ -74,7 +74,7 @@ const BlogDetailed = ({ id, url }) => {
           </div>
         </div>
         <div className="p-3 border m-4 rounded-md mt-16 h-fit">
-          <h1 className="text-2xl font-bold text-primary">More Blogs</h1>
+          <h1 className="text-2xl font-bold text-primary" style={{ fontFamily: "Roboto Slab, serif" }}>More Blogs</h1>
           <ul className="mt-3">
             {blog.map((a) => (
               <Link
@@ -88,7 +88,7 @@ const BlogDetailed = ({ id, url }) => {
                       <td className="align-top">
                         <FaArrowCircleRight className="mt-1.5 mr-1 " />
                       </td>
-                      <td className="align-top text-black">{a.title}</td>
+                      <td className="align-top text-black" style={{ fontFamily: "Roboto Slab, serif" }}>{a.title}</td>
                     </tr>
                   </tbody>
                 </table>

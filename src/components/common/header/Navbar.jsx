@@ -4,95 +4,65 @@ import Link from "next/link";
 import Image from "next/image";
 
 const data = [
-  {
-    id: 1,
-    title: "Home",
-    newTab: false,
-    path: "/",
-  },
-  {
-    id: 2,
-    title: "About Us",
-    newTab: false,
-    path: "/aboutus",
-  },
-  {
-    id: 3,
-    title: "Services",
-    newTab: false,
-    path: "/services",
-  },
-  {
-    id: 4,
-    title: "Why Choose Us",
-    newTab: false,
-    path: "/whychooseus",
-  },
-  {
-    id: 5,
-    title: "Blogs",
-    newTab: false,
-    path: "/blogs",
-  },
-  {
-    id: 6,
-    title: "Contact Us",
-    newTab: false,
-    path: "/contactus",
-  },
+  { id: 1, title: "Home", newTab: false, path: "/" },
+  { id: 2, title: "About Us", newTab: false, path: "/aboutus" },
+  { id: 3, title: "Services", newTab: false, path: "/services" },
+  // { id: 4, title: "Why Choose Us", newTab: false, path: "/whychooseus" },
+  { id: 4, title: "Blogs", newTab: false, path: "/blogs" },
+  { id: 5, title: "Contact Us", newTab: false, path: "/contactus" },
 ];
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
-
-  const handleLinkClick = () => {
-    setIsOpen(false);
-  };
+  const toggleMenu = () => setIsOpen(!isOpen);
+  const handleLinkClick = () => setIsOpen(false);
 
   const UnderlineAnimation = ({ isActive }) => (
     <div
-      className={`transition-all duration-300 ease-in-out ${
-        isActive ? "w-full" : "w-0"
-      } bottom-0 left-0 h-1 bg-orange-400`}
+      className={`transition-all duration-300 ease-in-out ${isActive ? "w-full" : "w-0"
+        } bottom-0 left-0 h-1 bg-orange-400`}
     />
   );
 
   return (
-    <nav className="bg-white overflow-x-hidden">
-      <div className="container flex justify-center items-center gap-44">
-        <Link href={"/"}>
+    <nav className="bg-white shadow-md z-50 w-full">
+      <div className="max-w-screen-xl mx-auto px-4 md:px-8 flex items-center justify-between h-[90px]">
+        {/* Logo */}
+        <Link href="/" className="flex-shrink-0">
           <Image
             src="/logo/logo.png"
-            width={1000}
-            height={1000}
+            width={160}
+            height={110}
             alt="Logo"
-            className="h-[110px] w-[160px] p-2"
+            className="h-[110px] w-[160px] object-contain p-3"
           />
         </Link>
 
-        <div className=" hidden md:flex justify-center space-x-8">
+        {/* Desktop Menu */}
+        <div className="hidden md:flex flex-1 justify-center space-x-8">
           {data.map((d) => (
             <Link key={d.id} href={d.path} passHref>
               <div
-                className=" group text-black text-lg font-semibold cursor-pointer transition duration-300 ease-in-out transform hover:scale-125"
                 onClick={handleLinkClick}
+                className="group text-black text-lg font-semibold cursor-pointer transition duration-300 ease-in-out transform hover:scale-125"
                 target={d.newTab ? "_blank" : "_self"}
                 rel={d.newTab ? "noopener noreferrer" : ""}
               >
-                <span className="inline-block hover:text-orange-400 px-10 lg:px-0">
+                <span
+                  className="inline-block hover:text-orange-400 px-2"
+                  style={{ fontFamily: "Roboto Slab, serif" }}
+                >
                   {d.title}
                 </span>
-                <UnderlineAnimation isActive={isOpen} />
+                <UnderlineAnimation isActive={false} />
               </div>
             </Link>
           ))}
         </div>
 
-        <div className="col-start-11 col-span-2 md:hidden flex justify-end">
+        {/* Mobile Menu Button */}
+        <div className="md:hidden">
           <button
             onClick={toggleMenu}
             className="text-black focus:outline-none"
@@ -117,14 +87,15 @@ const Navbar = () => {
         </div>
       </div>
 
+      {/* Mobile Menu List */}
       {isOpen && (
-        <div className="md:hidden">
-          <div className="flex flex-col space-y-4 mt-4">
+        <div className="md:hidden px-4 pb-4">
+          <div className="flex flex-col space-y-4 mt-2">
             {data.map((d) => (
               <Link key={d.id} href={d.path} passHref>
                 <div
-                  className="text-black text-lg font-semibold cursor-pointer transition duration-300 ease-in-out transform hover:scale-105"
                   onClick={handleLinkClick}
+                  className="text-black text-lg font-semibold cursor-pointer transition duration-300 ease-in-out transform hover:scale-105"
                   target={d.newTab ? "_blank" : "_self"}
                   rel={d.newTab ? "noopener noreferrer" : ""}
                 >
