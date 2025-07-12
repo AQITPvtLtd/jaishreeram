@@ -26,16 +26,15 @@ const Navbar = () => {
   );
 
   return (
-    <nav className="bg-white shadow-md z-50 w-full">
+    <nav className="bg-white shadow-md z-50 w-full overflow-hidden">
       <div className="max-w-screen-xl mx-auto px-4 md:px-8 flex items-center justify-between h-[90px]">
-        {/* Logo */}
         <Link href="/" className="flex-shrink-0">
           <Image
             src="/logo/logo.png"
-            width={160}
-            height={110}
+            width={140}
+            height={90}
             alt="Logo"
-            className="h-[110px] w-[160px] object-contain p-3"
+            className="h-[90px] w-auto object-contain"
           />
         </Link>
 

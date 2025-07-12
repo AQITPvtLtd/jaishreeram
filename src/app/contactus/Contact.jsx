@@ -90,7 +90,7 @@ const Contact = () => {
               </Link>
 
               <Link
-                href={"https://g.co/kgs/mGfSUGk"}
+                href={"https://maps.app.goo.gl/KhMMQsYeJR6J9KMZ9"}
                 target="__blank"
               >
                 <div className="flex space-x-2 py-1">
@@ -98,7 +98,8 @@ const Contact = () => {
                     <IoLocation className="text-xl text-orange-500" />
                   </div>
                   <p className="text-lg text-gray-800 font-semibold">
-                    Fourth floor, 2E, 4, Jhandewalan Extension, Delhi, 110055
+                    Office no. 02, 220/3, Vill, Shalimar Bagh,
+                    <br /> New Delhi, Delhi - 110088
                   </p>
                 </div>
               </Link>

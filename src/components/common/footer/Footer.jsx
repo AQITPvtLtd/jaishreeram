@@ -61,22 +61,22 @@ const Footer = () => {
             <h1 className="text-2xl font-bold mb-4" style={{ fontFamily: "Roboto Slab, serif" }}>Services</h1>
             <ul>
               <li className="mb-2 transition duration-300 ease-in-out hover:text-orange-500">
-                <Link href="/">Digital Marketing</Link>
+                <Link href="/services/digital-marketing">Digital Marketing</Link>
               </li>
               <li className="mb-2 transition duration-300 ease-in-out hover:text-orange-500">
-                <Link href="/aboutus">Health and Life Insurance</Link>
+                <Link href="/services/health-and-life-insurance">Health and Life Insurance</Link>
               </li>
               <li className="mb-2 transition duration-300 ease-in-out hover:text-orange-500">
-                <Link href="/services">JSR Associates</Link>
+                <Link href="/services/jsr-associates">JSR Associates</Link>
               </li>
               <li className="mb-2 transition duration-300 ease-in-out hover:text-orange-500">
-                <Link href="/whychooseus">Share Market</Link>
+                <Link href="/services/share-market">Share Market</Link>
               </li>
               <li className="mb-2 transition duration-300 ease-in-out hover:text-orange-500">
-                <Link href="/blogs">Law firm and Legal Services</Link>
+                <Link href="/services/law-firm-and-legal-services">Law firm and Legal Services</Link>
               </li>
               <li className="mb-2 transition duration-300 ease-in-out hover:text-orange-500">
-                <Link href="/contactus">Financial Services</Link>
+                <Link href="/services/financial-services">Financial Services</Link>
               </li>
             </ul>
           </div>
@@ -107,14 +107,17 @@ const Footer = () => {
 
             <div className="mb-4">
               <Link
-                href="https://g.co/kgs/mGfSUGk"
+                href="https://maps.app.goo.gl/5C9LSXH5Qx6hwETv6"
                 target="_blank"
                 className="hover:text-orange-500 flex items-start"
               >
                 <div>
                   <MdLocationPin className="bg-black rounded-full text-white p-1.5 text-3xl hover:text-orange-500" />
                 </div>   <p className="ml-2 text-base ">
-                  S/F, Bhaskar Bhawan, 1882/A, <br /> South Extension I, Kotla Mubarakpur, <br /> New Delhi, Delhi 110003
+                  Office no. 02, 220/3,
+                  <br /> Vill Shalimar Bagh,
+                  <br />
+                  New Delhi, Delhi - 110088
                 </p>
               </Link>
             </div>
@@ -160,9 +163,9 @@ const Footer = () => {
         </div>
       </footer>
       <p className="text-center font-semibold p-3">
-        <Link href={"https://tekbooster.com"} target="_blank">
-          Design & Developed By Tek Booster <br className="lg:hidden block" /> (Digital Marketing Company)
-        </Link>
+
+        Copyright © 2024 JSR. All rights reserved.
+
       </p>
     </div>
   );
