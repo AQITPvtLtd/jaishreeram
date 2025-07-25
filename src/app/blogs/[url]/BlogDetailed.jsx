@@ -9,7 +9,7 @@ import { FaArrowCircleRight } from "react-icons/fa";
 import Link from "next/link";
 import Moment from "react-moment";
 
-const BlogDetailed = ({ id, url }) => {
+const BlogDetailed = ({ url }) => {
   const [blog, setBlog] = useState([]);
 
   useEffect(() => {
@@ -25,7 +25,7 @@ const BlogDetailed = ({ id, url }) => {
   // console.log("Received id and url:", { id, url });
 
   // Filter the article using both `id` and `url`
-  const filteredArticle = blog?.find((a) => a.id == id && a.url == url);
+  const filteredArticle = blog?.find((a) => a.url == url);
 
   // Debugging: Log the filtered article
   // console.log("Filtered article:", filteredArticle);
@@ -79,7 +79,7 @@ const BlogDetailed = ({ id, url }) => {
             {blog.map((a) => (
               <Link
                 key={a.id}
-                href={`/blogs/${a.id}/${a.url}`}
+                href={`/blogs/${a.url}`}
                 className="flex hover:text-orange-600 hover:translate-x-2 duration-300"
               >
                 <table>

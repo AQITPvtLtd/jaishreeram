@@ -41,12 +41,12 @@ const BlogCards = ({ blog }) => {
         height={400}
       />
       <div className="p-5">
-        <Link href={`/blogs/${id}/${url}`}>
+        <Link href={`/blogs/${url}`}>
           <h5 className="mb-2 text-xl font-bold tracking-tight text-gray-900" style={{ fontFamily: "Roboto Slab, serif" }}>
             {blog.title}
           </h5>
         </Link>
-        <p className="text-gray-600 flex">
+        <p className="text-gray-600 flex mb-2 text-sm">
           <SlCalender className="text-primary mt-1 mr-1" />
           <Moment format="MMMM DD, YYYY">{blog?.date}</Moment>
         </p>
@@ -59,7 +59,7 @@ const BlogCards = ({ blog }) => {
           />
         </p>
         <Link
-          href={`/blogs/${id}/${url}`}
+          href={`/blogs/${url}`}
           className="inline-flex bg-blue items-center px-3 py-2 text-sm font-medium text-center text-white bg-primary rounded-lg hover:bg-orange-500 bg-orange-600 focus:ring-4 focus:outline-none focus:ring-blue-300"
         >
           Read more
