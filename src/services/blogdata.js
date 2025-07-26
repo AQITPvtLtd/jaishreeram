@@ -5,7 +5,6 @@ export async function getBlogData() {
     const result = await httpAxios
       .get("/api/blog")
       .then((response) => response.data);
-    console.log(result);
     return result;
   } catch (err) {
     console.log(err);

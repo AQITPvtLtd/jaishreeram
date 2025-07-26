@@ -30,7 +30,6 @@ const Blogs = () => {
 };
 const BlogCards = ({ blog }) => {
   const url = blog?.url;
-  const id = blog?.id;
   return (
     <div className="max-w-sm bg-bg bg-opacity-60 border border-gray-200 rounded-lg shadow">
       <Image
