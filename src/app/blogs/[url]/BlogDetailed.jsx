@@ -8,6 +8,8 @@ import { FaUser } from "react-icons/fa";
 import { FaArrowCircleRight } from "react-icons/fa";
 import Link from "next/link";
 import Moment from "react-moment";
+import Head from 'next/head';
+
 
 const BlogDetailed = ({ url }) => {
   const [blog, setBlog] = useState([]);
@@ -36,6 +38,12 @@ const BlogDetailed = ({ url }) => {
 
   return (
     <div className="overflow-x-hidden">
+      {/* SEO Meta Tags */}
+      <Head>
+        <title>{blog.meta_title || blog.title}</title>
+        <meta name="description" content={blog.meta_desc || blog.short_desc || ""} />
+        <meta name="keywords" content={blog.meta_keyword || ""} />
+      </Head>
       <div className="lg:grid grid-cols-4">
         <div className="col-span-3 p-4 ">
           <h1 className="lg:text-4xl text-3xl py-6 font-bold text-center text-primary" style={{ fontFamily: "Roboto Slab, serif" }}>
