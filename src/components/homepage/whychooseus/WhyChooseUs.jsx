@@ -34,44 +34,45 @@ const data = [
 const WhyChooseUs = () => {
   return (
     <div className="container mx-auto px-4 py-10">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+      <div className="lg:grid lg:grid-cols-12 items-center">
 
         {/* Left Section */}
-        <div className="text-center lg:text-left">
-          <h1 className="text-4xl font-bold text-center mb-4" style={{ fontFamily: "Roboto Slab, serif" }}>
-            Why Choose Us ?
-          </h1>
-          {/* <p className="text-base text-gray-700 mb-6 max-w-xl" style={{ fontFamily: "Inter, sans-serif" }}>
-            JSR Pvt. Ltd. is a multi-service company specializing in Digital Marketing, Health & Life Insurance, Financial Services, Share Market guidance, Company Registration, Legal Services, and Hospital Facility consultation.
-          </p> */}
-          <div className="flex justify-center lg:justify-center">
-            <Image src="/about/choose.png" alt="icon" width={350} height={350} />
+        <div className="col-start-1 col-span-4">
+          <div className="text-center lg:text-left">
+            <h1 className="text-4xl font-bold text-center mb-4" style={{ fontFamily: "Roboto Slab, serif" }}>
+              Why Choose Us ?
+            </h1>
+
+            <div className="flex justify-center lg:justify-center">
+              <Image src="/about/choose.png" alt="icon" width={350} height={350} />
+            </div>
           </div>
         </div>
 
         {/* Right Section - Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-          {data.map((item, index) => (
-            <div
-              key={index}
-              className={`rounded border shadow-sm p-4 text-sm ${item.type === "colored"
-                ? "bg-orange-500 text-white"
-                : "bg-white text-gray-800 border-gray-300"
-                }`}
-            >
-              <h2
-                className={`font-semibold mb-2 text-center`}
-                style={{ fontFamily: "Roboto Slab, serif" }}
+        <div className="col-start-6 col-span-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            {data.map((item, index) => (
+              <div
+                key={index}
+                className={`rounded border shadow-sm p-4 text-sm ${item.type === "colored"
+                  ? "bg-orange-500 text-white"
+                  : "bg-white text-gray-800 border-gray-300"
+                  }`}
               >
-                {item.title}
-              </h2>
-              <p className="text-justify" style={{ fontFamily: "Inter, sans-serif" }}>
-                {item.description}
-              </p>
-            </div>
-          ))}
+                <h2
+                  className={`font-semibold mb-2 text-center`}
+                  style={{ fontFamily: "Roboto Slab, serif" }}
+                >
+                  {item.title}
+                </h2>
+                <p className="text-justify" style={{ fontFamily: "Inter, sans-serif" }}>
+                  {item.description}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
-
       </div>
     </div>
   );

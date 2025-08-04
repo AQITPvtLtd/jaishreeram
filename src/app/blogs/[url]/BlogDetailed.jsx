@@ -44,8 +44,8 @@ const BlogDetailed = ({ url }) => {
         <meta name="description" content={blog.meta_desc || blog.short_desc || ""} />
         <meta name="keywords" content={blog.meta_keyword || ""} />
       </Head>
-      <div className="lg:grid grid-cols-4">
-        <div className="col-span-3 p-4 ">
+      <div className="grid lg:grid-cols-12">
+        <div className="col-span-8 p-4 ">
           <h1 className="lg:text-4xl text-3xl py-6 font-bold text-center text-primary" style={{ fontFamily: "Roboto Slab, serif" }}>
             {filteredArticle.title}
           </h1>
@@ -67,7 +67,7 @@ const BlogDetailed = ({ url }) => {
                 Team JaiShreeRam
               </p>
             </div>
-            <div className="mt-7 pb-7 mx-24 bg-gray-200 px-10 pt-3 rounded-lg text-justify">
+            <div className="mt-7 pb-7 mx-5 bg-gray-200 px-10 pt-3 rounded-lg text-justify">
               <div className="text-2xl text-center mt-4 mb-2" style={{ fontFamily: "Roboto Slab, serif" }}>
                 {filteredArticle.title}
               </div>
@@ -76,34 +76,37 @@ const BlogDetailed = ({ url }) => {
                 dangerouslySetInnerHTML={{
                   __html: filteredArticle.content,
                 }}
-                className=""
               />
             </div>
           </div>
         </div>
-        <div className="p-3 border m-4 rounded-md mt-16 h-fit">
-          <h1 className="text-2xl font-bold text-primary" style={{ fontFamily: "Roboto Slab, serif" }}>More Blogs</h1>
-          <ul className="mt-3">
-            {blog.map((a) => (
-              <Link
-                key={a.id}
-                href={`/blogs/${a.url}`}
-                className="flex hover:text-orange-600 hover:translate-x-2 duration-300"
-              >
-                <table>
-                  <tbody>
-                    <tr>
-                      <td className="align-top">
-                        <FaArrowCircleRight className="mt-1.5 mr-1 " />
-                      </td>
-                      <td className="align-top text-black" style={{ fontFamily: "Roboto Slab, serif" }}>{a.title}</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </Link>
-            ))}
-          </ul>
+
+        <div className="col-span-3">
+          <div className="p-3 border m-4 rounded-md mt-16 h-fit">
+            <h1 className="text-2xl font-bold text-primary" style={{ fontFamily: "Roboto Slab, serif" }}>More Blogs</h1>
+            <ul className="mt-3">
+              {blog.map((a) => (
+                <Link
+                  key={a.id}
+                  href={`/blogs/${a.url}`}
+                  className="flex hover:text-orange-600 hover:translate-x-2 duration-300"
+                >
+                  <table>
+                    <tbody>
+                      <tr>
+                        <td className="align-top">
+                          <FaArrowCircleRight className="mt-1.5 mr-1 " />
+                        </td>
+                        <td className="align-top text-black" style={{ fontFamily: "Roboto Slab, serif" }}>{a.title}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </Link>
+              ))}
+            </ul>
+          </div>
         </div>
+
       </div>
     </div>
   );

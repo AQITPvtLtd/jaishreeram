@@ -122,7 +122,7 @@ const Footer = () => {
               </Link>
             </div>
 
-            <div className="flex flex-wrap gap-4 text-xl mt-4">
+            {/* <div className="flex flex-wrap gap-4 text-xl mt-4">
               <Link
                 href="https://www.instagram.com/jsr_pvt_ltd/?igsh=MTU1cDdwbGVpeHp6cg%3D%3D"
                 target="_blank"
@@ -130,6 +130,7 @@ const Footer = () => {
               >
                 <FaInstagram />
               </Link>
+
               <Link
                 href="https://www.facebook.com/profile.php?id=61558692683271"
                 target="_blank"
@@ -137,6 +138,7 @@ const Footer = () => {
               >
                 <FaFacebook />
               </Link>
+
               <Link
                 href="https://in.pinterest.com/jsr23031991/"
                 target="_blank"
@@ -144,6 +146,8 @@ const Footer = () => {
               >
                 <FaPinterest />
               </Link>
+
+
               <Link
                 href="https://x.com/Jsr23031991"
                 target="_blank"
@@ -158,7 +162,7 @@ const Footer = () => {
               >
                 <FaYoutube />
               </Link>
-            </div>
+            </div> */}
           </div>
         </div>
       </footer>

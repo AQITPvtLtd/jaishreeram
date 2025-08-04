@@ -42,7 +42,7 @@ const Servicedata = ({ path }) => {
         </aside>
 
         {/* Main Content */}
-        <main className="lg:w-3/4 w-full">
+        <main className="lg:w-3/4 w-full px-5">
           {serviceDetailed ? (
             <div className="bg-white rounded-xl shadow-md p-6">
               <h1
