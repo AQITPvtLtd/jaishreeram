@@ -8,8 +8,7 @@ import { FaUser } from "react-icons/fa";
 import { FaArrowCircleRight } from "react-icons/fa";
 import Link from "next/link";
 import Moment from "react-moment";
-import Head from 'next/head';
-
+import Head from "next/head";
 
 const BlogDetailed = ({ url }) => {
   const [blog, setBlog] = useState([]);
@@ -17,20 +16,19 @@ const BlogDetailed = ({ url }) => {
   useEffect(() => {
     const getData = async () => {
       const data = await getBlogData();
-      console.log("Fetched blog data:", data); // Debugging log
       setBlog(data.result);
     };
     getData();
   }, []);
 
-  // Debugging: Log the ID and URL passed in props
-  // console.log("Received id and url:", { id, url });
+  const filteredArticle = blog?.find((a) => a.url === url);
 
-  // Filter the article using both `id` and `url`
-  const filteredArticle = blog?.find((a) => a.url == url);
-
-  // Debugging: Log the filtered article
-  // console.log("Filtered article:", filteredArticle);
+  // ✅ Update browser tab title dynamically
+  useEffect(() => {
+    if (filteredArticle) {
+      document.title = filteredArticle.meta_title || filteredArticle.title;
+    }
+  }, [filteredArticle]);
 
   if (!filteredArticle) {
     return <p className="text-center text-red-500">Blog not found!</p>;
@@ -40,13 +38,27 @@ const BlogDetailed = ({ url }) => {
     <div className="overflow-x-hidden">
       {/* SEO Meta Tags */}
       <Head>
-        <title>{blog.meta_title || blog.title}</title>
-        <meta name="description" content={blog.meta_desc || blog.short_desc || ""} />
-        <meta name="keywords" content={blog.meta_keyword || ""} />
+        <title>{filteredArticle.meta_title || filteredArticle.title}</title>
+        <meta
+          name="description"
+          content={
+            filteredArticle.meta_disc ||
+            filteredArticle.small_desc ||
+            ""
+          }
+        />
+        <meta
+          name="keywords"
+          content={filteredArticle.meta_keyword || ""}
+        />
       </Head>
+
       <div className="grid lg:grid-cols-12">
         <div className="col-span-8 p-4 ">
-          <h1 className="lg:text-4xl text-3xl py-6 font-bold text-center text-primary" style={{ fontFamily: "Roboto Slab, serif" }}>
+          <h1
+            className="lg:text-4xl text-3xl py-6 font-bold text-center text-primary"
+            style={{ fontFamily: "Roboto Slab, serif" }}
+          >
             {filteredArticle.title}
           </h1>
           <div>
@@ -60,7 +72,9 @@ const BlogDetailed = ({ url }) => {
             <div className="flex pt-2">
               <p className="text-gray-600 flex">
                 <SlCalender className="text-primary mt-1 mr-1" />
-                <Moment format="MMMM DD, YYYY">{filteredArticle.date}</Moment>
+                <Moment format="MMMM DD, YYYY">
+                  {filteredArticle.date}
+                </Moment>
               </p>
               <p className="text-gray-600 flex ml-10">
                 <FaUser className="text-primary mt-1 mr-1" />
@@ -68,7 +82,10 @@ const BlogDetailed = ({ url }) => {
               </p>
             </div>
             <div className="mt-7 pb-7 mx-5 bg-gray-200 px-10 pt-3 rounded-lg text-justify">
-              <div className="text-2xl text-center mt-4 mb-2" style={{ fontFamily: "Roboto Slab, serif" }}>
+              <div
+                className="text-2xl text-center mt-4 mb-2"
+                style={{ fontFamily: "Roboto Slab, serif" }}
+              >
                 {filteredArticle.title}
               </div>
               <div className="border border-blue-800 mx-10 mb-4"></div>
@@ -83,7 +100,12 @@ const BlogDetailed = ({ url }) => {
 
         <div className="col-span-3">
           <div className="p-3 border m-4 rounded-md mt-16 h-fit">
-            <h1 className="text-2xl font-bold text-primary" style={{ fontFamily: "Roboto Slab, serif" }}>More Blogs</h1>
+            <h1
+              className="text-2xl font-bold text-primary"
+              style={{ fontFamily: "Roboto Slab, serif" }}
+            >
+              More Blogs
+            </h1>
             <ul className="mt-3">
               {blog.map((a) => (
                 <Link
@@ -97,7 +119,12 @@ const BlogDetailed = ({ url }) => {
                         <td className="align-top">
                           <FaArrowCircleRight className="mt-1.5 mr-1 " />
                         </td>
-                        <td className="align-top text-black" style={{ fontFamily: "Roboto Slab, serif" }}>{a.title}</td>
+                        <td
+                          className="align-top text-black"
+                          style={{ fontFamily: "Roboto Slab, serif" }}
+                        >
+                          {a.title}
+                        </td>
                       </tr>
                     </tbody>
                   </table>
@@ -106,7 +133,6 @@ const BlogDetailed = ({ url }) => {
             </ul>
           </div>
         </div>
-
       </div>
     </div>
   );

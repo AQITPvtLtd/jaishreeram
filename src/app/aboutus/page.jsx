@@ -3,6 +3,24 @@ import Image from "next/image";
 import "animate.css";
 import Mission from "./Mission&Vission";
 
+export const metadata = {
+  title: "About JSR Pvt Ltd | Trusted Multi-Domain Experts in New Delhi",
+  description:
+    "Discover how JSR Pvt Ltd grow into a leading business solutions company in New Delhi, helping clients succeed in the digital space, finance, law, real estate, and insurance.",
+  keywords: [
+    "business solutions company in new delhi",
+    "about jsr pvt ltd",
+    "company history jsr",
+    "stock market experts",
+    "legal services new delhi",
+    "property advisors",
+    "insurance experts",
+    "team jsr",
+    "trusted business firm",
+    "multi service provider",
+  ],
+};
+
 const About = () => {
   return (
     <div className="px-5">

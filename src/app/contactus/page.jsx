@@ -1,6 +1,24 @@
 import React from "react";
 import Contact from "./Contact";
 
+export const metadata = {
+  title: "Contact JSR Pvt Ltd | Connect with Us in New Delhi",
+  description:
+    "Get in touch with JSR Pvt Ltd in New Delhi for expert help in stock markets, legal services, digital services, insurance, and property solutions.",
+  keywords: [
+    "contact consultancy firm in new delhi",
+    "get in touch jsr",
+    "contact jsr pvt ltd",
+    "new delhi business contact",
+    "legal help contact",
+    "real estate inquiries",
+    "insurance experts",
+    "stock market assistance",
+    "jsr office location",
+    "reach us today"
+  ],
+};
+
 const page = () => {
   return (
     <div>
