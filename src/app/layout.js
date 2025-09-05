@@ -8,11 +8,6 @@ import SocialLinks from "@/components/SocialLinks";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata = {
-  title: "Jai Shree Ram",
-  description: "JaiShreeRam.com",
-};
-
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
