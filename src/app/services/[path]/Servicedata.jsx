@@ -52,7 +52,7 @@ const Servicedata = ({ path }) => {
       <div className="pt-10 lg:px-16 px-4 bg-gray-50">
         <div className="flex flex-col lg:flex-row gap-10">
           {/* Sidebar */}
-          <aside className="lg:w-1/4 w-full bg-white rounded-xl shadow-md p-5 h-fit sticky top-24">
+          <aside className="lg:w-1/4 w-full bg-white rounded-xl shadow-md p-5 h-fit sticky top-24 lg:block hidden">
             <h2
               className="text-xl font-bold mb-4 text-gray-800"
               style={{ fontFamily: "Roboto Slab, serif" }}
@@ -96,13 +96,36 @@ const Servicedata = ({ path }) => {
               </div>
 
               <div
-                className="text-gray-800 text-base lg:text-justify"
+                className="text-gray-800 text-base text-justify"
                 dangerouslySetInnerHTML={{
                   __html: serviceDetailed.content,
                 }}
               ></div>
             </div>
           </main>
+
+           <aside className="lg:w-1/4 w-full bg-white rounded-xl shadow-md p-5 h-fit sticky top-24 lg:hidden">
+            <h2
+              className="text-xl font-bold mb-4 text-gray-800"
+              style={{ fontFamily: "Roboto Slab, serif" }}
+            >
+              All Services
+            </h2>
+            <ul className="space-y-3">
+              {service.map((item) => (
+                <li key={item.path}>
+                  <Link
+                    href={`/services/${item.path}`}
+                    className={`block text-blue-600 hover:text-orange-500 transition font-medium ${
+                      item.path === path ? "text-orange-600 font-semibold" : ""
+                    }`}
+                  >
+                    {item.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </aside>
         </div>
       </div>
     </>
