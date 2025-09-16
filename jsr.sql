@@ -2,9 +2,9 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Aug 11, 2025 at 11:03 AM
--- Server version: 10.4.32-MariaDB
+-- Host: 145.223.21.198:3306
+-- Generation Time: Sep 16, 2025 at 11:00 AM
+-- Server version: 8.0.42-0ubuntu0.24.04.1
 -- PHP Version: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -28,16 +28,16 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `blog` (
-  `id` int(11) NOT NULL,
-  `title` varchar(200) NOT NULL,
-  `small_desc` varchar(1000) NOT NULL,
-  `image` varchar(200) NOT NULL,
-  `meta_title` varchar(200) NOT NULL,
-  `meta_disc` text NOT NULL,
-  `meta_keyword` text NOT NULL,
-  `url` varchar(200) NOT NULL,
+  `id` int NOT NULL,
+  `title` varchar(200) COLLATE utf8mb4_general_ci NOT NULL,
+  `small_desc` varchar(1000) COLLATE utf8mb4_general_ci NOT NULL,
+  `image` varchar(200) COLLATE utf8mb4_general_ci NOT NULL,
+  `meta_title` varchar(200) COLLATE utf8mb4_general_ci NOT NULL,
+  `meta_disc` text COLLATE utf8mb4_general_ci NOT NULL,
+  `meta_keyword` text COLLATE utf8mb4_general_ci NOT NULL,
+  `url` varchar(200) COLLATE utf8mb4_general_ci NOT NULL,
   `date` date NOT NULL,
-  `content` mediumtext NOT NULL
+  `content` mediumtext COLLATE utf8mb4_general_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -85,12 +85,12 @@ INSERT INTO `blog` (`id`, `title`, `small_desc`, `image`, `meta_title`, `meta_di
 --
 
 CREATE TABLE `jsram` (
-  `id` varchar(100) NOT NULL,
-  `Fname` varchar(100) NOT NULL,
-  `Lname` varchar(100) NOT NULL,
-  `Email` varchar(100) NOT NULL,
-  `Phone` varchar(10) NOT NULL,
-  `Message` varchar(200) NOT NULL
+  `id` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
+  `Fname` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
+  `Lname` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
+  `Email` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
+  `Phone` varchar(10) COLLATE utf8mb4_general_ci NOT NULL,
+  `Message` varchar(200) COLLATE utf8mb4_general_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -98,6 +98,7 @@ CREATE TABLE `jsram` (
 --
 
 INSERT INTO `jsram` (`id`, `Fname`, `Lname`, `Email`, `Phone`, `Message`) VALUES
+('020d3945-529e-46ef-856a-3fb504af68c5', 'Abhishek', 'Mathur', 'tekbooster25@gmail.com', '9879879871', 'website testing...'),
 ('232fdc8e-333f-4cfc-84e4-dcb33e4756ad', 'test', 'test', 'palaksehgal0707@gmail.com', '1234567890', 'website testign'),
 ('24ab042a-de03-4a4c-a1e5-a0e99256bc50', 'test', 'test', 'palaksehgal0707@gmail.com', '1234567890', 'website testign'),
 ('413aa1ac-ba05-4c0f-af67-9a8638efbedc', 'test', 'test', 'palaksehgal0707@gmail.com', '1234567890', 'website testign'),
@@ -110,14 +111,14 @@ INSERT INTO `jsram` (`id`, `Fname`, `Lname`, `Email`, `Phone`, `Message`) VALUES
 --
 
 CREATE TABLE `services` (
-  `s.no` int(11) NOT NULL,
-  `title` varchar(200) NOT NULL,
-  `meta_title` varchar(200) NOT NULL,
-  `meta_desc` varchar(200) NOT NULL,
-  `meta_keyword` varchar(500) NOT NULL,
-  `image` varchar(200) NOT NULL,
-  `content` text NOT NULL,
-  `path` varchar(200) NOT NULL
+  `s.no` int NOT NULL,
+  `title` varchar(200) COLLATE utf8mb4_general_ci NOT NULL,
+  `meta_title` varchar(200) COLLATE utf8mb4_general_ci NOT NULL,
+  `meta_desc` varchar(200) COLLATE utf8mb4_general_ci NOT NULL,
+  `meta_keyword` varchar(500) COLLATE utf8mb4_general_ci NOT NULL,
+  `image` varchar(200) COLLATE utf8mb4_general_ci NOT NULL,
+  `content` text COLLATE utf8mb4_general_ci NOT NULL,
+  `path` varchar(200) COLLATE utf8mb4_general_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -165,7 +166,7 @@ ALTER TABLE `services`
 -- AUTO_INCREMENT for table `services`
 --
 ALTER TABLE `services`
-  MODIFY `s.no` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `s.no` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
