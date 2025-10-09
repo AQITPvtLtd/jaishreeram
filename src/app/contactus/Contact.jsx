@@ -13,9 +13,11 @@ import { FaPinterest } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
 import { FaYoutube } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
+import { ClipLoader } from "react-spinners";
 
 const Contact = () => {
   const router = useRouter();
+  const [loading, setLoading] = useState(false);
   const [formData, setformData] = useState({
     Fname: "",
     Lname: "",
@@ -30,26 +32,37 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await form(formData);
+    setLoading(true);
 
-    if (response.success) {
-      Swal.fire({
-        title: "Form Sumbitted Successfully!",
-        text: "You clicked the button!",
-        icon: "success",
-      });
+    try {
+      const response = await form(formData);
+      if (response.success) {
+        Swal.fire({
+          title: "Form Sumbitted Successfully!",
+          text: "You clicked the button!",
+          icon: "success",
+        });
 
-      // Swal(response.message, {
-      //   position: "top-center",
-      // });
-      router.push("/");
-    } else {
+        // Swal(response.message, {
+        //   position: "top-center",
+        // });
+        router.push("/");
+      } else {
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Something went wrong!",
+          footer: '<a href="#">Why do I have this issue?</a>',
+        });
+      }
+    } catch (error) {
       Swal.fire({
         icon: "error",
-        title: "Oops...",
-        text: "Something went wrong!",
-        footer: '<a href="#">Why do I have this issue?</a>',
-      });
+        title: "Error",
+        text: "Failed to submit the form. Please check your network and try again.",
+      })
+    } finally {
+      setLoading(false)
     }
   };
 
@@ -313,15 +326,19 @@ const Contact = () => {
               ></textarea>
             </div>
 
-            <div>
-              <button
-                type="submit"
-                className="w-full bg-orange-500 text-white py-3 rounded-lg hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                style={{ fontFamily: "Roboto Slab, serif" }}
-              >
-                Submit
-              </button>
+            <div className="text-center mt-4">
+              {
+                loading ? (<div className="flex justify-center items-center w-full h-full fixed top-0 left-0 z-50 rounded-md" style={{ backgroundColor: "rgba(75, 0, 130, 0.5)" }}>
+                  <ClipLoader width="60" height="60" color="#eb5f30" className="animate-spin" />
+                </div>) : (<button className="w-full bg-orange-500 text-white py-3 rounded-lg hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  type="submit"
+                  style={{ fontFamily: "Roboto Slab, serif" }}
+                >
+                  Submit
+                </button>)
+              }
             </div>
+
           </form>
         </div>
       </div>
