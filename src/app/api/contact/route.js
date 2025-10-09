@@ -13,7 +13,7 @@ export const POST = async (request) => {
 
     // Insert data into MySQL database
     const [rows] = await connection.query(
-      "INSERT INTO jsram (id, Fname, Lname, Phone, Email, Message) VALUES (?, ?, ?, ?, ?, ?)",
+      "INSERT INTO jsram (id, date, Fname, Lname, Phone, Email, Message) VALUES (?, NOW(), ?, ?, ?, ?, ?)",
       [id, Fname, Lname, Phone, Email, Message]
     );
 
@@ -26,6 +26,9 @@ export const POST = async (request) => {
         user: process.env.MY_EMAIL,
         pass: process.env.MY_PASSWORD,
       },
+      tls: {
+        rejectUnauthorized: false // self-signed SSL allow
+      }
     });
 
     // Send email to admin
