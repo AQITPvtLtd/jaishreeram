@@ -21,7 +21,12 @@ const BlogDetailed = ({ url }) => {
     getData();
   }, []);
 
-  const filteredArticle = blog?.find((a) => a.url === url);
+  const filteredArticle = blog?.find(
+    (a) =>
+      a.url.trim().toLowerCase() ===
+      decodeURIComponent(url).trim().toLowerCase()
+  );
+
 
   // ✅ Update browser tab title dynamically
   useEffect(() => {
