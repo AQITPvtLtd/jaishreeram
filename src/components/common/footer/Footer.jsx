@@ -14,7 +14,7 @@ const Footer = () => {
   return (
     <div className="bg-gray-200">
       <footer className="text-gray-800 py-8 md:py-10 lg:py-12 mt-5 md:px-0 px-5">
-        <div className="container mx-auto grid grid-cols-1 md:grid-cols-12 gap-8">
+        <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-12 gap-8">
           <div className="md:col-start-1 md:col-span-4 flex flex-col items-center md:items-start">
             <Image
               src={"/logo/jsrlogo1.png"}
