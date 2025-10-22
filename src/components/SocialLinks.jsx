@@ -1,14 +1,12 @@
 "use client";
-import { React, useState } from "react";
+import React, { useState } from "react";
 import Link from "next/link";
-import { FaTimes, FaBars } from "react-icons/fa";
+import { FaTimes } from "react-icons/fa";
 import Image from "next/image";
-
 
 export default function SocialLinks() {
   const [isOpen, setIsOpen] = useState(false);
 
-  // ek helper function banaya jisse icons ek hi jagah se manage ho
   const socialIcons = (
     <>
       {/* Facebook */}
@@ -39,33 +37,18 @@ export default function SocialLinks() {
       {/* Pinterest */}
       <Link href="https://in.pinterest.com/jsr23031991/" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full transition-transform duration-500 hover:scale-125" > <span className="[&>svg]:h-7 [&>svg]:w-7 [&>svg]:fill-[#e60023]"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"> <path d="M496 256c0 137-111 248-248 248-25.6 0-50.2-3.9-73.4-11.1 10.1-16.5 25.2-43.5 30.8-65 3-11.6 15.4-59 15.4-59 8.1 15.4 31.7 28.5 56.8 28.5 74.8 0 128.7-68.8 128.7-154.3 0-81.9-66.9-143.2-152.9-143.2-107 0-163.9 71.8-163.9 150.1 0 36.4 19.4 81.7 50.3 96.1 4.7 2.2 7.2 1.2 8.3-3.3 .8-3.4 5-20.3 6.9-28.1 .6-2.5 .3-4.7-1.7-7.1-10.1-12.5-18.3-35.3-18.3-56.6 0-54.7 41.4-107.6 112-107.6 60.9 0 103.6 41.5 103.6 100.9 0 67.1-33.9 113.6-78 113.6-24.3 0-42.6-20.1-36.7-44.8 7-29.5 20.5-61.3 20.5-82.6 0-19-10.2-34.9-31.4-34.9-24.9 0-44.9 25.7-44.9 60.2 0 22 7.4 36.8 7.4 36.8s-24.5 103.8-29 123.2c-5 21.4-3 51.6-.9 71.2C65.4 450.9 0 361.1 0 256 0 119 111 8 248 8s248 111 248 248z" /> </svg> </span> </Link>
 
-      {/* Aapke baaki icons (X, YouTube, Pinterest, WhatsApp) bhi yaha dal do 
-          same tarike se jaise upar hai */}
     </>
   );
 
   return (
     <>
-      {/* Desktop Sidebar (always visible) */}
-      <div
-        className="
-          fixed top-1/2 right-0 transform -translate-y-1/2
-          flex flex-col gap-2 justify-center items-center p-2 bg-gray-200
-          z-[9999] rounded-l-xl
-          hidden lg:flex
-        "
-      >
-        {socialIcons}
-      </div>
-
-      {/* Mobile Sidebar (toggle open/close) */}
+      {/* Toggle Sidebar */}
       <div
         className={`
           fixed top-1/2 right-0 transform -translate-y-1/2
           flex flex-col gap-2 justify-center items-center p-2 bg-gray-200 
-          z-[9999] rounded-l-xl transition-transform duration-500
+          z-[9999] rounded-l-xl transition-transform duration-500 shadow-lg
           ${isOpen ? "translate-x-0" : "translate-x-[120%]"}
-          lg:hidden
         `}
       >
         {socialIcons}
@@ -79,18 +62,17 @@ export default function SocialLinks() {
         </button>
       </div>
 
-      {/* Toggle Button (Mobile only) */}
+      {/* Toggle Button for All Screens */}
       {!isOpen && (
         <button
           onClick={() => setIsOpen(true)}
           className="fixed top-1/2 right-0 transform -translate-y-1/2 
-     text-white p-1 bg-orange-600 rounded-l-xl shadow-lg z-[9999] lg:hidden"
-
+          text-white p-1 bg-orange-600 rounded-l-xl shadow-lg z-[9999]"
         >
           <Image
-            src="/logo/iconsidebar.png"   // yaha apna image ka naam/path laga do
+            src="/logo/iconsidebar.png"
             alt="Menu"
-            width={48}   // size aapko jo chahiye uske hisaab se set kijiye
+            width={48}
             height={48}
           />
         </button>
